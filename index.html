@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Solutions Entreprises 972 — Cabinet de conseil en Martinique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased;color:#0B2027;}
+a{color:#045C6F;text-decoration:none;}a:hover{color:#0097B2;}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes gradShift{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes shine{0%{transform:translateX(-140%) skewX(-20deg)}55%,100%{transform:translateX(320%) skewX(-20deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
+</style>
+</helmet>
+<div style="font-family:'Poppins',sans-serif;color:#0B2027;background:#fff;overflow-x:hidden;">
+  <div id="progress" style="position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:linear-gradient(90deg,#0097B2,#FFCE08);box-shadow:0 0 10px rgba(0,151,178,.4);"></div>
+  <nav id="nav" style="position:fixed;top:26px;left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:34px;background:transparent;border:1px solid rgba(255,255,255,.28);border-radius:50px;padding:9px 10px 9px 20px;white-space:nowrap;transition:background .35s ease, box-shadow .35s ease, border-color .35s ease, backdrop-filter .35s ease;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <img src="assets/logo.webp" alt="SE972" style="width:38px;height:38px;border-radius:50%;">
+      <span id="nav-brand" style="font-weight:600;font-size:12.5px;letter-spacing:.04em;color:#fff;transition:color .35s ease;">SOLUTIONS ENTREPRISES 972</span>
+    </div>
+    <div id="nav-links" style="display:flex;align-items:center;gap:24px;font-size:13.5px;font-weight:500;color:rgba(255,255,255,.82);transition:color .35s ease;">
+      <a href="#offres" class="navlink" style="color:inherit;">Nos offres</a><a href="#methode" class="navlink" style="color:inherit;">Méthode</a><a href="#resultats" class="navlink" style="color:inherit;">Résultats</a><a href="#equipe" class="navlink" style="color:inherit;">L'équipe</a>
+    </div>
+    <a href="#contact" id="nav-cta" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#FFDD66 0%,#FFCE08 60%,#F2C200 100%);color:#0B2027;font-weight:600;padding:12px 24px;font-size:13px;border-radius:50px;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),filter .35s;box-shadow:0 8px 20px rgba(255,206,8,.28);" style-after="content:'';position:absolute;top:0;left:0;width:38%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shine 4.5s ease-in-out infinite;" style-hover="transform:translateY(-2px);box-shadow:0 14px 32px rgba(255,206,8,.45);filter:brightness(1.05);">Demander un devis<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;vertical-align:-1px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+  </nav>
+
+  <header style="padding:14px 14px 0;">
+    <div style="position:relative;border-radius:26px;overflow:hidden;min-height:760px;display:flex;flex-direction:column;">
+      <img src="assets/atelier_4.jpg" data-parallax="0.06" alt="Kim Gros-Désormeaux en animation" style="position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;object-position:center 30%;will-change:transform;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(3,42,51,.66) 0%, rgba(3,42,51,.34) 42%, rgba(3,42,51,.82) 100%);"></div>
+      <div style="position:absolute;top:-120px;right:-90px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.55),transparent 70%);filter:blur(70px);"></div>
+      <div style="position:absolute;bottom:-140px;left:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.28),transparent 70%);filter:blur(80px);"></div>
+      <div data-reveal="" style="position:relative;margin:auto;text-align:center;padding:196px 40px 60px;max-width:840px;color:#fff;">
+        <div style="display:inline-flex;align-items:center;gap:13px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#FFCE08;margin-bottom:26px;"><span style="width:30px;height:1.5px;background:linear-gradient(90deg,transparent,#FFCE08);"></span>Cabinet de conseil · Martinique<span style="width:30px;height:1.5px;background:linear-gradient(90deg,#FFCE08,transparent);"></span></div>
+        <h1 id="hero-title" style="font-size:53px;font-weight:600;line-height:1.13;letter-spacing:-.015em;margin:0 0 22px;text-wrap:balance;">Un renfort à vos côtés, pour piloter ce que vous n'avez pas le temps de structurer seul.</h1>
+        <p style="font-size:16.5px;line-height:1.7;color:rgba(255,255,255,.86);max-width:580px;margin:0 auto 38px;font-weight:300;">Gestion de projet, direction commerciale externalisée ou transformation en 90 jours — on prend l'opérationnel, vous gardez les décisions.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+          <a href="#offres" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#FFDD66 0%,#FFCE08 60%,#F2C200 100%);color:#0B2027;font-weight:600;padding:16px 32px;font-size:14.5px;border-radius:50px;box-shadow:0 14px 34px rgba(255,206,8,.32);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),filter .35s;" style-after="content:'';position:absolute;top:0;left:0;width:38%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shine 4.5s ease-in-out infinite;" style-hover="transform:translateY(-2px);box-shadow:0 20px 46px rgba(255,206,8,.5);filter:brightness(1.05);">Découvrir les 3 offres<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;vertical-align:-1px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0k7AiHzHdrwTq9RbgKjm8bokxFIgCJ1VabxS8OdNyvXT5qtiux8Wi9zUUXe-Z-0orSB7pwO6hm" style="border:1.5px solid rgba(255,255,255,.55);color:#fff;font-weight:500;padding:15px 30px;font-size:14.5px;border-radius:50px;backdrop-filter:blur(6px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .45s,border-color .45s;" style-hover="background:rgba(255,255,255,.14);transform:translateY(-2px);border-color:rgba(255,255,255,.85);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;vertical-align:-2px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Planifier un appel de 15 min</a>
+        </div>
+      </div>
+      <div style="position:relative;display:flex;justify-content:center;gap:0;padding:0 40px 40px;color:rgba(255,255,255,.82);font-size:12.5px;flex-wrap:wrap;">
+        <div style="padding:0 34px;">Cabinet <strong style="color:#fff;font-weight:600;">labellisé</strong>, partenaire Martinique Développement</div>
+        <div style="padding:0 34px;border-left:1px solid rgba(255,255,255,.2);">Missions auprès de <strong style="color:#fff;font-weight:600;">TPE, PME et institutions</strong></div>
+        <div style="padding:0 34px;border-left:1px solid rgba(255,255,255,.2);">Un <strong style="color:#fff;font-weight:600;">interlocuteur unique</strong>, du diagnostic au suivi</div>
+      </div>
+    </div>
+  </header>
+
+  <div style="border-bottom:1px solid #EFF3F4;padding:40px 0 42px;overflow:hidden;background:#fff;">
+    <div style="text-align:center;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:#9BAAAF;margin-bottom:30px;">Ils nous font confiance</div>
+    <div id="logos-track" style="display:flex;gap:82px;align-items:center;width:max-content;animation:marquee 30s linear infinite;">
+      <img src="assets/logos/haining-logo.png" style="height:54px;opacity:.82;" alt="Haining"><img src="assets/logos/bpi_france.png" style="height:58px;opacity:.82;" alt="BPI France"><img src="assets/logos/reseau_entreprendre_martinique.png" style="height:60px;opacity:.82;" alt="Réseau Entreprendre"><img src="assets/logos/luso-label.jpg" style="height:56px;opacity:.82;" alt="Luso Label"><img src="assets/logos/jci.png" style="height:58px;opacity:.82;" alt="JCI"><img src="assets/logos/sogesta.png" style="height:54px;opacity:.82;" alt="Sogesta"><img src="assets/logos/colab.png" style="height:58px;opacity:.82;" alt="Colab"><img src="assets/logos/nms.png" style="height:56px;opacity:.82;" alt="NMS">
+      <img src="assets/logos/haining-logo.png" style="height:54px;opacity:.82;" alt=""><img src="assets/logos/bpi_france.png" style="height:58px;opacity:.82;" alt=""><img src="assets/logos/reseau_entreprendre_martinique.png" style="height:60px;opacity:.82;" alt=""><img src="assets/logos/luso-label.jpg" style="height:56px;opacity:.82;" alt=""><img src="assets/logos/jci.png" style="height:58px;opacity:.82;" alt=""><img src="assets/logos/sogesta.png" style="height:54px;opacity:.82;" alt=""><img src="assets/logos/colab.png" style="height:58px;opacity:.82;" alt=""><img src="assets/logos/nms.png" style="height:56px;opacity:.82;" alt="">
+    </div>
+  </div>
+
+  <div id="cabinet" style="position:relative;background:#fff;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(4,92,111,.05) 1.1px,transparent 1.1px);background-size:38px 38px;opacity:.6;"></div>
+    <div style="position:absolute;top:-120px;left:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.12),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:absolute;bottom:-160px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.11),transparent 70%);filter:blur(80px);"></div>
+    <div style="position:relative;max-width:1080px;margin:0 auto;padding:132px 60px;text-align:center;">
+      <div data-reveal="" style="display:inline-flex;align-items:center;gap:13px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#0097B2;margin-bottom:38px;"><span style="width:30px;height:1.5px;background:linear-gradient(90deg,transparent,#0097B2);"></span>Le cabinet<span style="width:30px;height:1.5px;background:linear-gradient(90deg,#0097B2,transparent);"></span></div>
+      <p data-reveal="" style="font-size:40px;font-weight:500;line-height:1.32;letter-spacing:-.02em;margin:0;color:#9BAAAF;text-wrap:balance;">Vous n'avez pas besoin d'un rapport de plus.<br>Vous avez besoin de <span style="color:#0B2027;font-weight:600;">quelqu'un à vos côtés</span>, qui connaît la Martinique, prend l'opérationnel en main et <span style="background:linear-gradient(90deg,#0097B2,#045C6F,#0AB4D8,#0097B2);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600;animation:gradShift 5s linear infinite;">vous rend la main sur votre croissance.</span></p>
+      <div data-reveal="" style="display:flex;justify-content:center;gap:44px;flex-wrap:wrap;margin-top:52px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#45585E;">
+        <span>Local</span><span style="color:#D6E1E4;">·</span><span>Concret</span><span style="color:#D6E1E4;">·</span><span>Humain</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="pourqui" style="position:relative;background:#fff;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(4,92,111,.05) 1.1px,transparent 1.1px);background-size:38px 38px;opacity:.5;"></div>
+    <div style="position:absolute;top:-90px;right:-120px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.1),transparent 70%);filter:blur(65px);"></div>
+    <div style="position:absolute;bottom:-120px;left:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.1),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:relative;max-width:1260px;margin:0 auto;padding:104px 60px;">
+      <div data-reveal="" style="text-align:center;max-width:640px;margin:0 auto 56px;">
+        <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#0097B2;margin-bottom:16px;">Pour qui</div>
+        <h2 style="font-size:37px;font-weight:600;line-height:1.15;letter-spacing:-.02em;margin:0 0 16px;">On travaille avec ceux<br>qui <span style="background:linear-gradient(90deg,#0097B2,#045C6F,#0AB4D8,#0097B2);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:gradShift 5s linear infinite;">font vivre la Martinique</span></h2>
+        <p style="font-size:14.5px;color:#5B6B70;line-height:1.7;margin:0 auto;max-width:500px;">La bonne offre dépend de votre situation, pas de votre taille. Reconnaissez-vous&nbsp;?</p>
+      </div>
+      <div data-reveal="" data-stagger="" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+        <div style="background:linear-gradient(180deg,#fff 0%,#F4F9FA 100%);border:1px solid #E4EEF0;border-radius:20px;padding:30px 26px;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 6px rgba(4,92,111,.05),0 16px 40px rgba(4,92,111,.1);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(4,92,111,.1),0 34px 70px rgba(4,92,111,.2);border-color:#BFE0E6;">
+          <span style="width:46px;height:46px;border-radius:14px;background:rgba(0,151,178,.09);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+          <div style="font-weight:600;font-size:16.5px;margin-bottom:6px;">Indépendants &amp; TPE</div>
+          <div style="width:28px;height:3px;border-radius:2px;background:#0097B2;margin:0 0 14px;"></div>
+          <div style="font-size:13px;color:#5B6B70;line-height:1.6;">Vous portez tout, tout seul. On structure l'essentiel pour vous dégager du temps et de la visibilité.</div>
+        </div>
+        <div style="background:linear-gradient(180deg,#fff 0%,#F4F9FA 100%);border:1px solid #E4EEF0;border-radius:20px;padding:30px 26px;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 6px rgba(4,92,111,.05),0 16px 40px rgba(4,92,111,.1);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(4,92,111,.1),0 34px 70px rgba(4,92,111,.2);border-color:#BFE0E6;">
+          <span style="width:46px;height:46px;border-radius:14px;background:rgba(0,151,178,.09);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><path d="M17 6h6v6"></path></svg></span>
+          <div style="font-weight:600;font-size:16.5px;margin-bottom:6px;">PME en croissance</div>
+          <div style="width:28px;height:3px;border-radius:2px;background:#0097B2;margin:0 0 14px;"></div>
+          <div style="font-size:13px;color:#5B6B70;line-height:1.6;">Ça grandit vite, parfois trop. On remet de l'ordre dans l'organisation et la stratégie commerciale.</div>
+        </div>
+        <div style="background:linear-gradient(180deg,#fff 0%,#F4F9FA 100%);border:1px solid #E4EEF0;border-radius:20px;padding:30px 26px;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 6px rgba(4,92,111,.05),0 16px 40px rgba(4,92,111,.1);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(4,92,111,.1),0 34px 70px rgba(4,92,111,.2);border-color:#BFE0E6;">
+          <span style="width:46px;height:46px;border-radius:14px;background:rgba(0,151,178,.09);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V7l6-4 6 4v14"></path><path d="M10 9h.01M14 9h.01M10 13h.01M14 13h.01M10 17h.01M14 17h.01"></path></svg></span>
+          <div style="font-weight:600;font-size:16.5px;margin-bottom:6px;">Institutions &amp; collectivités</div>
+          <div style="width:28px;height:3px;border-radius:2px;background:#0097B2;margin:0 0 14px;"></div>
+          <div style="font-size:13px;color:#5B6B70;line-height:1.6;">Des projets à fort enjeu de territoire. On apporte méthode, animation et lien avec les acteurs locaux.</div>
+        </div>
+        <div style="background:linear-gradient(180deg,#FFFDF4 0%,#FFF8E3 100%);border:1px solid #F1DF98;border-radius:20px;padding:30px 26px;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 6px rgba(255,206,8,.08),0 16px 40px rgba(255,206,8,.14);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(255,206,8,.14),0 34px 70px rgba(255,206,8,.28);border-color:#E6CE72;">
+          <span style="width:46px;height:46px;border-radius:14px;background:rgba(255,206,8,.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B58A00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></span>
+          <div style="font-weight:600;font-size:16.5px;margin-bottom:6px;">Créateurs &amp; porteurs de projet</div>
+          <div style="width:28px;height:3px;border-radius:2px;background:#FFCE08;margin:0 0 14px;"></div>
+          <div style="font-size:13px;color:#5B6B70;line-height:1.6;">Une idée, une envie, encore floue. On la transforme en plan concret, réaliste et finançable.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="offres" style="position:relative;background:linear-gradient(180deg,#F4F9FA 0%,#EAF4F6 100%);overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(4,92,111,.09) 1.1px,transparent 1.1px);background-size:34px 34px;opacity:.5;"></div>
+    <div style="position:absolute;top:60px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.16),transparent 70%);filter:blur(50px);"></div>
+    <div style="position:absolute;bottom:-100px;left:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.14),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:relative;max-width:1260px;margin:0 auto;padding:104px 60px 108px;">
+      <div data-reveal="" style="text-align:center;max-width:720px;margin:0 auto 52px;">
+        <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#0097B2;margin-bottom:16px;">Nos offres</div>
+        <h2 style="font-size:41px;font-weight:600;line-height:1.14;letter-spacing:-.02em;margin:0 0 18px;">Trois façons concrètes de nous <span style="background:linear-gradient(90deg,#0097B2,#045C6F,#0AB4D8,#0097B2);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:gradShift 5s linear infinite;">faire intervenir à vos côtés</span></h2>
+        <p style="font-size:15px;color:#4B5C61;line-height:1.7;margin:0 auto 26px;max-width:540px;">Chaque offre répond à une situation précise. Pas besoin du jargon conseil : trouvez celle qui parle de votre problème.</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:9px;"><span style="display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #DDEAEC;color:#33454B;font-size:12px;font-weight:500;padding:7px 13px;border-radius:50px;box-shadow:0 4px 12px rgba(4,92,111,.04);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Sans engagement</span><span style="display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #DDEAEC;color:#33454B;font-size:12px;font-weight:500;padding:7px 13px;border-radius:50px;box-shadow:0 4px 12px rgba(4,92,111,.04);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Devis clair sous 24 h</span><span style="display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #DDEAEC;color:#33454B;font-size:12px;font-weight:500;padding:7px 13px;border-radius:50px;box-shadow:0 4px 12px rgba(4,92,111,.04);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Prix visible avant de décider</span></div>
+      </div>
+      <div data-reveal="" data-stagger="" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:stretch;">
+
+        <div style="position:relative;border:1px solid #E1EAEC;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,#fff 0%,#F4F9FA 100%);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 6px rgba(4,92,111,.05),0 16px 40px rgba(4,92,111,.1);transition:box-shadow .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="box-shadow:0 28px 64px rgba(4,92,111,.16);transform:translateY(-5px);">
+          <div style="position:relative;height:180px;">
+            <img src="assets/atelier_8.jpg" alt="Cadrage de projet au tableau" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,92,111,.05),rgba(4,92,111,.45));"></div>
+            <div style="position:absolute;top:16px;left:16px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#fff;background:rgba(4,92,111,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:50px;">01</div>
+            <div style="position:absolute;bottom:-24px;left:26px;width:52px;height:52px;border-radius:15px;background:#fff;box-shadow:0 8px 20px rgba(4,92,111,.16);display:flex;align-items:center;justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"></path><path d="m9 14 2 2 4-4"></path></svg>
+            </div>
+          </div>
+          <div style="padding:38px 30px 32px;display:flex;flex-direction:column;flex:1;background:radial-gradient(120% 60% at 100% 100%,rgba(0,151,178,.13),transparent 55%),radial-gradient(90% 70% at 0% 0%,rgba(0,151,178,.05),transparent 50%);">
+            <div style="font-size:12.5px;font-weight:600;color:#0097B2;margin-bottom:10px;">Vous avez un projet à lancer</div>
+            <h3 style="font-size:21px;font-weight:600;letter-spacing:-.01em;margin:0 0 6px;">Chef de Projet — PMO</h3><div style="width:30px;height:3px;border-radius:2px;background:#0097B2;margin:2px 0 14px;"></div>
+            <p style="font-size:13.5px;color:#5B6B70;line-height:1.65;margin:0 0 20px;">Pilotage de projet ou d'événement de A à Z : cadrage, prestataires, calendrier, reporting. Vous restez décisionnaire, on porte l'opérationnel.</p>
+            <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#0097B2;margin-bottom:13px;">Ce qui est inclus</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;color:#33454B;margin-bottom:26px;">
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(0,151,178,.1);color:#0097B2;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Cadrage du projet et des objectifs</div>
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(0,151,178,.1);color:#0097B2;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Le bon réseau de prestataires</div>
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(0,151,178,.1);color:#0097B2;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Coordination, suivi, reporting régulier</div>
+            </div>
+            <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;border-top:1px solid #EFF3F4;">
+              <div style="font-size:12px;color:#5B6B70;">Formats <strong style="color:#0B2027;">3 · 6 · 12 mois</strong></div>
+              <a href="#contact" style="display:inline-flex;align-items:center;white-space:nowrap;background:#F0F5F6;color:#045C6F;font-weight:600;font-size:13px;padding:12px 22px;border-radius:50px;transition:background .3s,color .3s,transform .45s cubic-bezier(.16,1,.3,1);" style-hover="background:#045C6F;color:#fff;transform:translateY(-2px);">Devis<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;vertical-align:-1px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div style="border-radius:24px;overflow:hidden;display:flex;flex-direction:column;position:relative;background:linear-gradient(160deg,#045C6F 0%,#032A33 100%);color:#fff;box-shadow:0 30px 70px rgba(3,42,51,.32);transform:translateY(-14px);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1);" style-hover="transform:translateY(-20px);box-shadow:0 40px 84px rgba(3,42,51,.4);">
+          <div style="position:absolute;top:-60px;right:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.5),transparent 70%);filter:blur(30px);"></div>
+          <div style="position:absolute;top:18px;right:18px;background:#FFCE08;color:#0B2027;font-size:10.5px;font-weight:700;letter-spacing:.06em;padding:6px 14px;border-radius:50px;z-index:3;box-shadow:0 6px 16px rgba(255,206,8,.4);">LA PLUS DEMANDÉE</div>
+          <div style="position:relative;height:180px;">
+            <img src="assets/atelier_12.jpg" alt="Animation d'équipe commerciale" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.72;">
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,42,51,.15),rgba(3,42,51,.85));"></div>
+            <div style="position:absolute;top:16px;left:16px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#0B2027;background:#FFCE08;padding:6px 12px;border-radius:50px;">02</div>
+            <div style="position:absolute;bottom:-24px;left:26px;width:52px;height:52px;border-radius:15px;background:#FFCE08;box-shadow:0 8px 22px rgba(255,206,8,.4);display:flex;align-items:center;justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B2027" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
+            </div>
+          </div>
+          <div style="position:relative;padding:38px 30px 32px;display:flex;flex-direction:column;flex:1;background:radial-gradient(120% 80% at 100% 100%,rgba(255,206,8,.08),transparent 45%);">
+            <div style="font-size:12.5px;font-weight:600;color:#FFCE08;margin-bottom:10px;">Vous vendez sans process</div>
+            <h3 style="font-size:21px;font-weight:600;letter-spacing:-.01em;margin:0 0 6px;">Direction Commerciale externalisée</h3><div style="width:30px;height:3px;border-radius:2px;background:#FFCE08;margin:2px 0 14px;"></div>
+            <p style="font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.65;margin:0 0 20px;">Une direction commerciale déléguée, sans recrutement à temps plein — avec une brique RH pour clarifier les rôles et accompagner vos équipes.</p>
+            <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#FFCE08;margin-bottom:13px;">Ce qui est inclus</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;color:rgba(255,255,255,.9);margin-bottom:26px;">
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(255,206,8,.18);color:#FFCE08;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Pilotage de l'activité, tableau de bord</div>
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(255,206,8,.18);color:#FFCE08;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Structuration des process de vente</div>
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(255,206,8,.18);color:#FFCE08;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Rôles clarifiés, management de proximité</div>
+            </div>
+            <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);">
+              <div style="font-size:12px;color:rgba(255,255,255,.66);">Formats <strong style="color:#fff;">3 · 6 · 12 mois</strong></div>
+              <a href="#contact" style="display:inline-flex;align-items:center;white-space:nowrap;background:#FFCE08;color:#0B2027;font-weight:600;font-size:13px;padding:12px 22px;border-radius:50px;" style-hover="background:#e6b900;">Devis<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;vertical-align:-1px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div style="position:relative;border:1px solid #E1EAEC;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,#fff 0%,#F4F9FA 100%);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 6px rgba(4,92,111,.05),0 16px 40px rgba(4,92,111,.1);transition:box-shadow .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="box-shadow:0 28px 64px rgba(4,92,111,.16);transform:translateY(-5px);">
+          <div style="position:relative;height:180px;">
+            <img src="assets/atelier_11.jpg" alt="Session de travail dirigeants" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,92,111,.05),rgba(4,92,111,.45));"></div>
+            <div style="position:absolute;top:16px;left:16px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#fff;background:rgba(4,92,111,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:50px;">03</div>
+            <div style="position:absolute;bottom:-24px;left:26px;width:52px;height:52px;border-radius:15px;background:#fff;box-shadow:0 8px 20px rgba(4,92,111,.16);display:flex;align-items:center;justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+            </div>
+          </div>
+          <div style="padding:38px 30px 32px;display:flex;flex-direction:column;flex:1;background:radial-gradient(120% 60% at 100% 100%,rgba(0,151,178,.13),transparent 55%),radial-gradient(90% 70% at 0% 0%,rgba(0,151,178,.05),transparent 50%);">
+            <div style="font-size:12.5px;font-weight:600;color:#0097B2;margin-bottom:10px;">Vous ne savez plus par où commencer</div>
+            <h3 style="font-size:21px;font-weight:600;letter-spacing:-.01em;margin:0 0 6px;">Transformation — 90 jours</h3><div style="width:30px;height:3px;border-radius:2px;background:#0097B2;margin:2px 0 14px;"></div>
+            <p style="font-size:13.5px;color:#5B6B70;line-height:1.65;margin:0 0 20px;">Un sprint dirigeant pour les entreprises à un tournant : 4 chantiers menés en parallèle, un plan d'action prêt à l'usage à la sortie.</p>
+            <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#0097B2;margin-bottom:13px;">Ce qui est inclus</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;color:#33454B;margin-bottom:26px;">
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(0,151,178,.1);color:#0097B2;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Offre, positionnement, communication</div>
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(0,151,178,.1);color:#0097B2;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Direction commerciale + volet RH</div>
+              <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex-shrink:0;width:19px;height:19px;border-radius:50%;background:rgba(0,151,178,.1);color:#0097B2;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px;">✓</span>Budget, trésorerie, optimisation fiscale</div>
+            </div>
+            <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;border-top:1px solid #EFF3F4;">
+              <div style="font-size:12px;color:#5B6B70;">Forfait <strong style="color:#0B2027;">90 jours</strong></div>
+              <a href="#contact" style="display:inline-flex;align-items:center;white-space:nowrap;background:#F0F5F6;color:#045C6F;font-weight:600;font-size:13px;padding:12px 22px;border-radius:50px;transition:background .3s,color .3s,transform .45s cubic-bezier(.16,1,.3,1);" style-hover="background:#045C6F;color:#fff;transform:translateY(-2px);">Devis<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;vertical-align:-1px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div data-reveal="" style="margin-top:44px;max-width:720px;margin-left:auto;margin-right:auto;display:flex;align-items:center;gap:18px;background:#fff;border:1px solid #E1EAEC;border-radius:18px;padding:22px 28px;box-shadow:0 10px 30px rgba(4,92,111,.06);">
+        <span style="flex-shrink:0;width:46px;height:46px;border-radius:13px;background:rgba(0,151,178,.09);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"></polygon></svg></span>
+        <div style="font-size:14px;color:#4B5C61;line-height:1.6;">Indépendant, PME ou institution — la bonne offre dépend de votre situation, <strong style="color:#045C6F;">pas de la taille de votre structure</strong>. On vous oriente dès le premier échange.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="methode" style="position:relative;background:#fff;overflow:hidden;">
+    <div style="position:absolute;top:120px;left:-140px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.12),transparent 70%);filter:blur(60px);"></div>
+    <div style="position:relative;max-width:1260px;margin:0 auto;padding:104px 60px;">
+      <div data-reveal="" style="text-align:center;max-width:700px;margin:0 auto 60px;">
+        <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#0097B2;margin-bottom:16px;">Notre méthode</div>
+        <h2 style="font-size:37px;font-weight:600;line-height:1.15;letter-spacing:-.02em;margin:0 0 16px;">On applique la même méthode à <span style="background:linear-gradient(90deg,#0097B2,#045C6F,#0AB4D8,#0097B2);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:gradShift 5s linear infinite;">chaque mission</span></h2>
+        <p style="font-size:14.5px;color:#5B6B70;line-height:1.7;margin:0 auto 30px;max-width:520px;">Un mélange de professionnalisme et d'humanité, pour faire ressortir le meilleur de chaque projet et de chaque rencontre.</p>
+        <div style="display:inline-flex;align-items:center;gap:16px;">
+          <div style="font-size:34px;font-weight:700;color:#0B2027;letter-spacing:-.02em;line-height:1;">4,9<span style="font-size:16px;font-weight:600;color:#9BAAAF;">/5</span></div>
+          <div style="width:1px;height:34px;background:#E1EAEC;"></div>
+          <div style="text-align:left;">
+            <div style="display:flex;gap:3px;margin-bottom:4px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFCE08" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.6 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFCE08" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.6 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFCE08" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.6 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFCE08" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.6 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFCE08" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.6 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
+            </div>
+            <div style="font-size:12.5px;color:#5B6B70;">Note moyenne des clients accompagnés</div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" data-stagger="" style="position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+        <div style="position:relative;z-index:1;background:#fff;border:1px solid #E4EEF0;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 12px rgba(4,92,111,.05),0 18px 44px rgba(4,92,111,.09);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(4,92,111,.1),0 34px 70px rgba(4,92,111,.2);border-color:#BFE0E6;">
+          <div style="position:relative;height:172px;overflow:hidden;">
+            <img src="assets/atelier_wa0038.jpg" alt="Premier échange autour d'une table" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center 32%;">
+            <div style="position:absolute;inset:0;background:#0E7C91;mix-blend-mode:multiply;opacity:.5;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,42,51,.1) 40%,rgba(3,42,51,.72));"></div>
+            <div style="position:absolute;left:22px;bottom:64px;font-size:10px;letter-spacing:.28em;font-weight:600;color:rgba(255,255,255,.8);text-transform:uppercase;">Étape</div>
+            <div style="position:absolute;left:20px;bottom:6px;font-size:66px;font-weight:700;line-height:.8;color:#fff;letter-spacing:-.03em;text-shadow:0 4px 16px rgba(3,42,51,.35);">01</div>
+            <div style="position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:13px;background:#fff;box-shadow:0 8px 20px rgba(4,92,111,.18);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></div>
+          </div>
+          <div style="padding:24px 24px 22px;display:flex;flex-direction:column;flex:1;background:radial-gradient(120% 90% at 100% 100%,rgba(0,151,178,.06),transparent 42%);">
+            <div style="font-weight:600;font-size:17px;letter-spacing:-.01em;margin-bottom:8px;">Connexion</div><div style="width:30px;height:3px;border-radius:2px;background:#0097B2;margin:2px 0 14px;"></div>
+            <div style="font-size:13px;color:#5B6B70;line-height:1.6;margin-bottom:16px;">Premier contact : on écoute, on questionne, on cerne les enjeux réels.</div><div style="display:flex;flex-direction:column;gap:9px;margin-bottom:18px;"><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#0097B2;flex-shrink:0;"></span>Écoute de votre contexte</div><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#0097B2;flex-shrink:0;"></span>Cadrage de l’enjeu principal</div></div>
+            <div style="display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:15px;border-top:1px solid #EEF4F5;font-size:12px;font-weight:600;color:#045C6F;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Appel découverte · 15 min</div>
+          </div>
+        </div>
+
+        <div style="position:relative;z-index:1;background:#fff;border:1px solid #E4EEF0;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 12px rgba(4,92,111,.05),0 18px 44px rgba(4,92,111,.09);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(4,92,111,.1),0 34px 70px rgba(4,92,111,.2);border-color:#BFE0E6;">
+          <div style="position:relative;height:172px;overflow:hidden;">
+            <img src="assets/atelier_2.jpg" alt="Atelier d'analyse au tableau" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center 40%;">
+            <div style="position:absolute;inset:0;background:#0E7C91;mix-blend-mode:multiply;opacity:.5;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,42,51,.1) 40%,rgba(3,42,51,.72));"></div>
+            <div style="position:absolute;left:22px;bottom:64px;font-size:10px;letter-spacing:.28em;font-weight:600;color:rgba(255,255,255,.8);text-transform:uppercase;">Étape</div>
+            <div style="position:absolute;left:20px;bottom:6px;font-size:66px;font-weight:700;line-height:.8;color:#fff;letter-spacing:-.03em;text-shadow:0 4px 16px rgba(3,42,51,.35);">02</div>
+            <div style="position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:13px;background:#fff;box-shadow:0 8px 20px rgba(4,92,111,.18);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></div>
+          </div>
+          <div style="padding:24px 24px 22px;display:flex;flex-direction:column;flex:1;background:radial-gradient(120% 90% at 100% 100%,rgba(0,151,178,.06),transparent 42%);">
+            <div style="font-weight:600;font-size:17px;letter-spacing:-.01em;margin-bottom:8px;">Diagnostic</div><div style="width:30px;height:3px;border-radius:2px;background:#0097B2;margin:2px 0 14px;"></div>
+            <div style="font-size:13px;color:#5B6B70;line-height:1.6;margin-bottom:16px;">Un audit ciblé — organisation, communication, posture commerciale — pour identifier les leviers.</div><div style="display:flex;flex-direction:column;gap:9px;margin-bottom:18px;"><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#0097B2;flex-shrink:0;"></span>Analyse organisation &amp; commerciale</div><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#0097B2;flex-shrink:0;"></span>Repérage des leviers prioritaires</div></div>
+            <div style="display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:15px;border-top:1px solid #EEF4F5;font-size:12px;font-weight:600;color:#045C6F;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Audit ciblé de l'activité</div>
+          </div>
+        </div>
+
+        <div style="position:relative;z-index:1;background:#fff;border:1px solid #E4EEF0;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 12px rgba(4,92,111,.05),0 18px 44px rgba(4,92,111,.09);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(4,92,111,.1),0 34px 70px rgba(4,92,111,.2);border-color:#BFE0E6;">
+          <div style="position:relative;height:172px;overflow:hidden;">
+            <img src="assets/atelier_8.jpg" alt="Plan d'action écrit au tableau" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center 30%;">
+            <div style="position:absolute;inset:0;background:#0E7C91;mix-blend-mode:multiply;opacity:.5;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,42,51,.1) 40%,rgba(3,42,51,.72));"></div>
+            <div style="position:absolute;left:22px;bottom:64px;font-size:10px;letter-spacing:.28em;font-weight:600;color:rgba(255,255,255,.8);text-transform:uppercase;">Étape</div>
+            <div style="position:absolute;left:20px;bottom:6px;font-size:66px;font-weight:700;line-height:.8;color:#fff;letter-spacing:-.03em;text-shadow:0 4px 16px rgba(3,42,51,.35);">03</div>
+            <div style="position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:13px;background:#fff;box-shadow:0 8px 20px rgba(4,92,111,.18);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"></path><path d="M14 2v5h5"></path><path d="M9 13h6M9 17h4"></path></svg></div>
+          </div>
+          <div style="padding:24px 24px 22px;display:flex;flex-direction:column;flex:1;background:radial-gradient(120% 90% at 100% 100%,rgba(0,151,178,.06),transparent 42%);">
+            <div style="font-weight:600;font-size:17px;letter-spacing:-.01em;margin-bottom:8px;">Proposition</div><div style="width:30px;height:3px;border-radius:2px;background:#0097B2;margin:2px 0 14px;"></div>
+            <div style="font-size:13px;color:#5B6B70;line-height:1.6;margin-bottom:16px;">Un plan d'action clair, un devis précis, des résultats projetés.</div><div style="display:flex;flex-direction:column;gap:9px;margin-bottom:18px;"><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#0097B2;flex-shrink:0;"></span>Plan d’action détaillé</div><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#0097B2;flex-shrink:0;"></span>Budget &amp; résultats projetés</div></div>
+            <div style="display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:15px;border-top:1px solid #EEF4F5;font-size:12px;font-weight:600;color:#045C6F;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Devis clair sous 24 h</div>
+          </div>
+        </div>
+
+        <div style="position:relative;z-index:1;background:#fff;border:1px solid #F1DF98;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 12px rgba(255,206,8,.08),0 18px 44px rgba(255,206,8,.14);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),border-color .55s;" style-hover="transform:translateY(-5px);box-shadow:0 10px 22px rgba(255,206,8,.14),0 34px 70px rgba(255,206,8,.28);border-color:#E6CE72;">
+          <div style="position:relative;height:172px;overflow:hidden;">
+            <img src="assets/atelier_11.jpg" alt="Session de travail en exécution" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center 45%;">
+            <div style="position:absolute;inset:0;background:#0E7C91;mix-blend-mode:multiply;opacity:.5;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,42,51,.12) 38%,rgba(3,42,51,.78));"></div>
+            <div style="position:absolute;left:22px;bottom:64px;font-size:10px;letter-spacing:.28em;font-weight:600;color:rgba(255,206,8,.9);text-transform:uppercase;">Étape</div>
+            <div style="position:absolute;left:20px;bottom:6px;font-size:66px;font-weight:700;line-height:.8;color:#FFCE08;letter-spacing:-.03em;text-shadow:0 4px 16px rgba(3,42,51,.4);">04</div>
+            <div style="position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:13px;background:#fff;box-shadow:0 8px 20px rgba(4,92,111,.18);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B58A00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg></div>
+          </div>
+          <div style="padding:24px 24px 22px;display:flex;flex-direction:column;flex:1;background:radial-gradient(120% 90% at 100% 100%,rgba(0,151,178,.06),transparent 42%);">
+            <div style="font-weight:600;font-size:17px;letter-spacing:-.01em;margin-bottom:8px;">Exécution &amp; suivi</div><div style="width:30px;height:3px;border-radius:2px;background:#FFCE08;margin:2px 0 14px;"></div>
+            <div style="font-size:13px;color:#5B6B70;line-height:1.6;margin-bottom:16px;">Points de contrôle réguliers, ajustements, et une autonomie solide à la sortie.</div><div style="display:flex;flex-direction:column;gap:9px;margin-bottom:18px;"><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#E3B505;flex-shrink:0;"></span>Points de suivi réguliers</div><div style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#45585E;"><span style="width:6px;height:6px;border-radius:50%;background:#E3B505;flex-shrink:0;"></span>Ajustements en continu</div></div>
+            <div style="display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:15px;border-top:1px solid #F3E9C8;font-size:12px;font-weight:600;color:#B58A00;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B58A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Bilan &amp; autonomie à la sortie</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="resultats" style="position:relative;background:linear-gradient(150deg,#032027 0%,#043845 48%,#045C6F 100%);overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1.1px,transparent 1.1px);background-size:36px 36px;"></div>
+    <div style="position:absolute;top:-100px;right:-80px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.45),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:absolute;bottom:-120px;left:-60px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.18),transparent 70%);filter:blur(80px);"></div>
+    <div style="position:relative;max-width:1260px;margin:0 auto;padding:100px 60px;">
+      <div data-reveal="" style="text-align:center;max-width:640px;margin:0 auto 60px;">
+        <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#FFCE08;margin-bottom:16px;">Chiffres clés</div>
+        <h2 style="font-size:38px;font-weight:600;line-height:1.14;letter-spacing:-.02em;margin:0;color:#fff;">On obtient des résultats concrets <span style="background:linear-gradient(90deg,#FFE59A,#FFCE08,#FFF2CC,#FFCE08);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:gradShift 5s linear infinite;">chez de vraies entreprises</span></h2>
+      </div>
+      <div data-reveal="" data-stagger="" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:940px;margin:0 auto;">
+        <div style="position:relative;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px 24px 28px;backdrop-filter:blur(8px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .45s,border-color .45s;" style-hover="transform:translateY(-5px);background:rgba(255,255,255,.09);border-color:rgba(255,206,8,.35);">
+          <div style="position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.16),transparent 70%);filter:blur(14px);pointer-events:none;"></div>
+          <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,206,8,.16);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FFCE08" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg></div>
+          <div style="font-size:40px;font-weight:600;letter-spacing:-.02em;color:#fff;line-height:1;position:relative;"><span data-count="133" data-prefix="+" data-suffix="%">+133%</span></div>
+          <div style="height:3px;width:44px;background:#FFCE08;margin:16px 0;border-radius:2px;"></div>
+          <div style="font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.6;position:relative;">de chiffre d'affaires en 2 ans chez un client BTP/VRD</div>
+        </div>
+        <div style="position:relative;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px 24px 28px;backdrop-filter:blur(8px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .45s,border-color .45s;" style-hover="transform:translateY(-5px);background:rgba(255,255,255,.09);border-color:rgba(255,206,8,.35);">
+          <div style="position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.24),transparent 70%);filter:blur(14px);pointer-events:none;"></div>
+          <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,206,8,.16);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FFCE08" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <div style="font-size:40px;font-weight:600;letter-spacing:-.02em;color:#fff;line-height:1;position:relative;"><span data-count="9" data-prefix="+" data-suffix="">+9</span></div>
+          <div style="height:3px;width:44px;background:#FFCE08;margin:16px 0;border-radius:2px;"></div>
+          <div style="font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.6;position:relative;">recrutements réalisés suite à la structuration</div>
+        </div>
+        <div style="position:relative;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px 24px 28px;backdrop-filter:blur(8px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .45s,border-color .45s;" style-hover="transform:translateY(-5px);background:rgba(255,255,255,.09);border-color:rgba(255,206,8,.35);">
+          <div style="position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.16),transparent 70%);filter:blur(14px);pointer-events:none;"></div>
+          <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,206,8,.16);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FFCE08" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg></div>
+          <div style="font-size:40px;font-weight:600;letter-spacing:-.02em;color:#fff;line-height:1;position:relative;"><span data-count="50" data-prefix="+" data-suffix="%">+50%</span></div>
+          <div style="height:3px;width:44px;background:#FFCE08;margin:16px 0;border-radius:2px;"></div>
+          <div style="font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.6;position:relative;">de CA chez certains bénéficiaires accompagnés</div>
+        </div>
+        <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(255,206,8,.22),rgba(255,206,8,.05));border:1px solid rgba(255,206,8,.4);border-radius:18px;padding:26px 24px 28px;backdrop-filter:blur(8px);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1);" style-hover="transform:translateY(-5px);box-shadow:0 20px 50px rgba(255,206,8,.2);">
+          <div style="position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.3),transparent 70%);filter:blur(14px);pointer-events:none;"></div>
+          <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,206,8,.24);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FFCE08" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></div>
+          <div style="font-size:40px;font-weight:600;letter-spacing:-.02em;color:#FFCE08;line-height:1;position:relative;">2030</div>
+          <div style="height:3px;width:44px;background:#FFCE08;margin:16px 0;border-radius:2px;"></div>
+          <div style="font-size:13.5px;color:rgba(255,255,255,.82);line-height:1.6;position:relative;">apport d'affaires sécurisé jusqu'à cette échéance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="equipe" style="position:relative;background:#fff;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(4,92,111,.05) 1.1px,transparent 1.1px);background-size:38px 38px;opacity:.5;"></div>
+    <div style="position:absolute;top:80px;right:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.1),transparent 70%);filter:blur(60px);"></div>
+    <div style="position:absolute;bottom:-80px;left:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.1),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:relative;max-width:860px;margin:0 auto;padding:110px 60px;text-align:center;">
+      <div data-reveal="">
+        <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#0097B2;margin-bottom:34px;">Votre consultante</div>
+        <div style="width:300px;max-width:78%;aspect-ratio:5/6;border-radius:24px;overflow:hidden;margin:0 auto 28px;box-shadow:0 26px 56px rgba(4,92,111,.24);">
+          <img src="assets/kim_dsc_9393.jpg" alt="Kim Gros-Désormeaux" style="width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;">
+        </div>
+        <div style="font-size:56px;line-height:0;color:#FFCE08;font-family:Georgia,serif;height:38px;">”</div>
+        <p style="font-size:27px;font-weight:500;line-height:1.42;letter-spacing:-.01em;color:#0B2027;margin:0 auto 30px;max-width:720px;text-wrap:balance;">J'accompagne les chefs d'entreprise pour améliorer leur gestion, optimiser leurs ressources et innover — <span style="color:#045C6F;">jusque sur le terrain, pas seulement dans les rapports.</span></p>
+        <div style="font-size:17px;font-weight:600;color:#0B2027;">Kim Gros-Désormeaux</div>
+        <div style="font-size:13.5px;font-weight:500;color:#5B6B70;margin-top:3px;">Consultante en croissance et innovation · Fondatrice de SE972</div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:32px 0 34px;">
+          <span style="display:inline-flex;align-items:center;gap:8px;background:#F0F7F8;border:1px solid #E1EAEC;color:#33454B;font-size:12.5px;font-weight:500;padding:8px 14px;border-radius:50px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Fort-de-France · toute la Martinique</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;background:#F0F7F8;border:1px solid #E1EAEC;color:#33454B;font-size:12.5px;font-weight:500;padding:8px 14px;border-radius:50px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>TPE · PME · Institutions</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;background:#F0F7F8;border:1px solid #E1EAEC;color:#33454B;font-size:12.5px;font-weight:500;padding:8px 14px;border-radius:50px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>Gestion · Commercial · Innovation</span>
+        </div>
+        <div style="display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;">
+          <a href="#contact" style="background:linear-gradient(135deg,#0AA6C2 0%,#045C6F 100%);color:#fff;font-weight:600;padding:15px 28px;font-size:13.5px;border-radius:50px;box-shadow:0 12px 28px rgba(4,92,111,.24);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),filter .35s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 40px rgba(4,92,111,.38);filter:brightness(1.06);">Discuter de mon besoin<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;vertical-align:-1px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+          <a href="tel:+33695958680" style="color:#045C6F;font-weight:600;font-size:13.5px;border-bottom:2px solid #FFCE08;padding:4px 2px;" style-hover="color:#0097B2;">06 95 95 86 80</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ateliers" style="position:relative;background:linear-gradient(180deg,#fff 0%,#F4F9FA 100%);overflow:hidden;">
+    <div style="position:absolute;top:-90px;left:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.1),transparent 70%);filter:blur(65px);"></div>
+    <div style="position:absolute;bottom:-100px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.1),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:relative;max-width:1260px;margin:0 auto;padding:100px 60px;">
+      <div data-reveal="" style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:44px;">
+        <div style="max-width:560px;">
+          <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#0097B2;margin-bottom:14px;">Sur le terrain</div>
+          <h2 style="font-size:34px;font-weight:600;line-height:1.14;letter-spacing:-.02em;margin:0 0 14px;">Voici à quoi ressemble un accompagnement</h2>
+          <p style="font-size:14.5px;color:#5B6B70;line-height:1.7;margin:0;">On ne conseille pas depuis un bureau fermé. On anime, on co-construit et on met les mains dans votre activité — au contact de vos équipes.</p>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:186px;gap:16px;">
+        <figure style="grid-column:span 2;grid-row:span 2;position:relative;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 16px 40px rgba(4,92,111,.14);">
+          <img src="assets/atelier_wa0009.jpg" alt="Atelier collectif animé par SE972" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1);" style-hover="transform:scale(1.05);">
+          <figcaption style="position:absolute;left:20px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-radius:50px;padding:8px 15px;font-size:12px;font-weight:600;color:#045C6F;box-shadow:0 8px 20px rgba(3,42,51,.2);"><span style="width:7px;height:7px;border-radius:50%;background:#FFCE08;"></span>Atelier collectif</figcaption>
+        </figure>
+        <figure style="position:relative;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(4,92,111,.1);">
+          <img src="assets/atelier_12.jpg" alt="Présentation d'une méthode au tableau" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1);" style-hover="transform:scale(1.05);">
+        </figure>
+        <figure style="position:relative;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(4,92,111,.1);">
+          <img src="assets/atelier_4.jpg" alt="Session de travail en petit groupe" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center 30%;transition:transform .7s cubic-bezier(.16,1,.3,1);" style-hover="transform:scale(1.05);">
+        </figure>
+        <figure style="grid-column:span 2;position:relative;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(4,92,111,.1);">
+          <img src="assets/atelier_wa0043.jpg" alt="Échange autour d'un projet" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1);" style-hover="transform:scale(1.05);">
+          <figcaption style="position:absolute;left:20px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-radius:50px;padding:8px 15px;font-size:12px;font-weight:600;color:#045C6F;box-shadow:0 8px 20px rgba(3,42,51,.2);"><span style="width:7px;height:7px;border-radius:50%;background:#0097B2;"></span>Co-construction</figcaption>
+        </figure>
+      </div>
+      <div data-reveal="" data-stagger="" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;padding-top:36px;border-top:1px solid #E1EAEC;">
+        <div style="display:flex;align-items:flex-start;gap:14px;"><span style="flex-shrink:0;width:44px;height:44px;border-radius:13px;background:rgba(0,151,178,.09);display:flex;align-items:center;justify-content:center;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><div><div style="font-weight:600;font-size:14.5px;color:#0B2027;margin-bottom:3px;">En présentiel, partout en Martinique</div><div style="font-size:12.5px;color:#5B6B70;line-height:1.55;">On se déplace chez vous ou sur site, du Nord au Sud de l’île.</div></div></div>
+        <div style="display:flex;align-items:flex-start;gap:14px;"><span style="flex-shrink:0;width:44px;height:44px;border-radius:13px;background:rgba(0,151,178,.09);display:flex;align-items:center;justify-content:center;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><div><div style="font-weight:600;font-size:14.5px;color:#0B2027;margin-bottom:3px;">En groupe ou en tête-à-tête</div><div style="font-size:12.5px;color:#5B6B70;line-height:1.55;">Le format s’adapte à votre équipe et à vos habitudes de travail.</div></div></div>
+        <div style="display:flex;align-items:flex-start;gap:14px;"><span style="flex-shrink:0;width:44px;height:44px;border-radius:13px;background:rgba(0,151,178,.09);display:flex;align-items:center;justify-content:center;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0097B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="m9 15 2 2 4-4"></path></svg></span><div><div style="font-weight:600;font-size:14.5px;color:#0B2027;margin-bottom:3px;">Vous repartez avec des livrables</div><div style="font-size:12.5px;color:#5B6B70;line-height:1.55;">Chaque atelier laisse une trace concrète : plan, support, prochaines étapes.</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="avis" style="position:relative;background:linear-gradient(150deg,#032027 0%,#043845 48%,#045C6F 100%);overflow:hidden;">
+    <img src="assets/atelier_wa0043.jpg" data-parallax="0.05" alt="" style="position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;opacity:.13;will-change:transform;">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1.1px,transparent 1.1px);background-size:36px 36px;"></div>
+    <div style="position:absolute;top:-80px;left:-100px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.4),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:absolute;bottom:-40px;right:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.14),transparent 70%);filter:blur(70px);"></div>
+    <div style="position:relative;max-width:1040px;margin:0 auto;padding:100px 60px;">
+      <div data-reveal="" style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:40px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#FFCE08;margin-bottom:14px;">Ils en parlent</div>
+          <h2 style="font-size:34px;font-weight:600;line-height:1.14;letter-spacing:-.02em;margin:0;color:#fff;">Ils racontent ce que ça a changé</h2>
+        </div>
+        <div style="display:flex;gap:12px;">
+          <button data-carousel-prev="" aria-label="Précédent" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s,color .3s,border-color .3s;" style-hover="background:#FFCE08;color:#0B2027;border-color:#FFCE08;transform:translateY(-2px);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></button>
+          <button data-carousel-next="" aria-label="Suivant" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s,color .3s,border-color .3s;" style-hover="background:#FFCE08;color:#0B2027;border-color:#FFCE08;transform:translateY(-2px);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></button>
+        </div>
+      </div>
+      <div data-carousel="" data-reveal="" style="position:relative;overflow:hidden;border-radius:26px;">
+        <div data-carousel-track="" style="display:flex;transition:transform .6s cubic-bezier(.16,1,.3,1);">
+
+          <div style="min-width:100%;box-sizing:border-box;">
+            <div style="position:relative;background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:58px 64px;box-shadow:0 22px 60px rgba(3,42,51,.3);overflow:hidden;">
+              <div style="position:absolute;top:-30px;left:34px;font-size:180px;line-height:1;font-family:Georgia,serif;color:#fff;opacity:.12;pointer-events:none;">“</div>
+              <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.14),transparent 70%);filter:blur(20px);pointer-events:none;"></div>
+              <div style="position:relative;color:#E3B505;font-size:16px;letter-spacing:.14em;margin-bottom:22px;">★★★★★</div>
+              <p style="position:relative;font-size:26px;font-weight:500;line-height:1.5;letter-spacing:-.01em;color:#F4FAFB;margin:0 0 34px;text-wrap:pretty;">Rester concentré dans le BTP n'est pas toujours simple, mais avec SE972 nous avons découvert une approche <span style="color:#FFCE08;">ludique et dynamique</span> qui a fait toute la différence. Nous avons renouvelé pour une mission supplémentaire.</p>
+              <div style="position:relative;display:flex;align-items:center;gap:16px;">
+                <div style="width:56px;height:56px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><img src="assets/logos/haining-logo.png" style="height:34px;max-width:40px;object-fit:contain;" alt="Haining"></div>
+                <div><div style="font-weight:600;font-size:15.5px;color:#fff;">Haining</div><div style="font-size:13px;color:rgba(255,255,255,.62);">Secteur BTP · Martinique</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="min-width:100%;box-sizing:border-box;">
+            <div style="position:relative;background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:58px 64px;box-shadow:0 22px 60px rgba(3,42,51,.3);overflow:hidden;">
+              <div style="position:absolute;top:-30px;left:34px;font-size:180px;line-height:1;font-family:Georgia,serif;color:#fff;opacity:.12;pointer-events:none;">“</div>
+              <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.16),transparent 70%);filter:blur(20px);pointer-events:none;"></div>
+              <div style="position:relative;color:#E3B505;font-size:16px;letter-spacing:.14em;margin-bottom:22px;">★★★★★</div>
+              <p style="position:relative;font-size:26px;font-weight:500;line-height:1.5;letter-spacing:-.01em;color:#F4FAFB;margin:0 0 34px;text-wrap:pretty;">Trouver le chemin vers la rentabilité était notre défi majeur. Nous avons affiné notre ciblage, optimisé notre communication et mis en place des <span style="color:#FFCE08;">stratégies d'autofinancement</span> efficaces.</p>
+              <div style="position:relative;display:flex;align-items:center;gap:16px;">
+                <div style="width:56px;height:56px;border-radius:16px;background:#FFCE08;color:#0B2027;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;flex-shrink:0;">PT</div>
+                <div><div style="font-weight:600;font-size:15.5px;color:#fff;">Exploitation Petit Tamarin</div><div style="font-size:13px;color:rgba(255,255,255,.62);">Agriculture · Martinique</div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:9px;margin-top:28px;">
+        <span data-carousel-dot="" style="height:8px;width:26px;border-radius:50px;background:#FFCE08;cursor:pointer;transition:width .35s cubic-bezier(.16,1,.3,1),background .35s;"></span>
+        <span data-carousel-dot="" style="height:8px;width:8px;border-radius:50px;background:rgba(255,255,255,.3);cursor:pointer;transition:width .35s cubic-bezier(.16,1,.3,1),background .35s;"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="faq" style="position:relative;background:linear-gradient(180deg,#fff 0%,#F4F9FA 100%);overflow:hidden;">
+    <div style="position:absolute;top:60px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.08),transparent 70%);filter:blur(60px);"></div>
+    <div style="position:absolute;bottom:40px;left:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.08),transparent 70%);filter:blur(60px);"></div>
+    <div style="position:relative;max-width:1260px;margin:0 auto;padding:100px 60px;display:grid;grid-template-columns:.82fr 1.18fr;gap:64px;align-items:start;">
+      <div data-reveal="" style="position:sticky;top:120px;">
+        <div style="font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#0097B2;margin-bottom:14px;">Questions fréquentes</div>
+        <h2 style="font-size:34px;font-weight:600;line-height:1.14;letter-spacing:-.02em;margin:0 0 18px;">Ce qu'on nous<br>demande souvent</h2>
+        <p style="font-size:14.5px;color:#5B6B70;line-height:1.7;margin:0 0 30px;max-width:320px;">Une réponse claire avant même le premier échange. Le reste, on en parle de vive voix.</p>
+        <div style="background:#fff;border:1px solid #E8F0F1;border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(4,92,111,.07);">
+          <div style="font-weight:600;font-size:15px;margin-bottom:6px;">Une autre question ?</div>
+          <div style="font-size:13px;color:#5B6B70;line-height:1.6;margin-bottom:18px;">On vous répond sous 24 h, avec un premier avis honnête.</div>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0AA6C2 0%,#045C6F 100%);color:#fff;font-weight:600;font-size:13px;padding:12px 22px;border-radius:50px;box-shadow:0 10px 24px rgba(4,92,111,.22);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),filter .35s;" style-hover="transform:translateY(-2px);box-shadow:0 16px 34px rgba(4,92,111,.34);filter:brightness(1.06);">Poser ma question<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+        </div>
+      </div>
+      <div data-reveal="" data-stagger="" style="display:flex;flex-direction:column;gap:14px;">
+        <div data-acc="" data-open="0" style="background:#fff;border:1px solid #E8F0F1;border-radius:18px;box-shadow:0 6px 22px rgba(4,92,111,.06);overflow:hidden;transition:border-color .3s,box-shadow .3s;">
+          <div data-acc-head="" style="display:flex;align-items:center;gap:20px;padding:24px 28px;cursor:pointer;">
+            <span style="font-size:13px;font-weight:700;color:#0097B2;letter-spacing:.04em;flex-shrink:0;width:24px;">01</span>
+            <span style="flex:1;font-weight:600;font-size:16px;color:#0B2027;">Comment se déroule un premier rendez-vous ?</span>
+            <span data-acc-icon="" style="flex-shrink:0;width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:#0097B2;transition:transform .35s cubic-bezier(.16,1,.3,1);font-size:24px;font-weight:300;line-height:1;">+</span>
+          </div>
+          <div data-acc-panel="" style="max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1);">
+            <div style="padding:0 28px 26px 72px;font-size:14px;color:#5B6B70;line-height:1.7;">15 à 30 minutes, par téléphone ou en visio. On écoute votre situation, on cerne l'enjeu principal, et on vous dit franchement si — et comment — on peut aider. Sans engagement.</div>
+          </div>
+        </div>
+        <div data-acc="" data-open="0" style="background:#fff;border:1px solid #E8F0F1;border-radius:18px;box-shadow:0 6px 22px rgba(4,92,111,.06);overflow:hidden;transition:border-color .3s,box-shadow .3s;">
+          <div data-acc-head="" style="display:flex;align-items:center;gap:20px;padding:24px 28px;cursor:pointer;">
+            <span style="font-size:13px;font-weight:700;color:#0097B2;letter-spacing:.04em;flex-shrink:0;width:24px;">02</span>
+            <span style="flex:1;font-weight:600;font-size:16px;color:#0B2027;">Faut-il s'engager sur une longue durée ?</span>
+            <span data-acc-icon="" style="flex-shrink:0;width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:#0097B2;transition:transform .35s cubic-bezier(.16,1,.3,1);font-size:24px;font-weight:300;line-height:1;">+</span>
+          </div>
+          <div data-acc-panel="" style="max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1);">
+            <div style="padding:0 28px 26px 72px;font-size:14px;color:#5B6B70;line-height:1.7;">Non. Les missions se déclinent en formats 3, 6 ou 12 mois, et le sprint Transformation dure 90 jours. On cale la durée sur votre besoin réel, pas l'inverse.</div>
+          </div>
+        </div>
+        <div data-acc="" data-open="0" style="background:#fff;border:1px solid #E8F0F1;border-radius:18px;box-shadow:0 6px 22px rgba(4,92,111,.06);overflow:hidden;transition:border-color .3s,box-shadow .3s;">
+          <div data-acc-head="" style="display:flex;align-items:center;gap:20px;padding:24px 28px;cursor:pointer;">
+            <span style="font-size:13px;font-weight:700;color:#0097B2;letter-spacing:.04em;flex-shrink:0;width:24px;">03</span>
+            <span style="flex:1;font-weight:600;font-size:16px;color:#0B2027;">Travaillez-vous avec les indépendants et petites structures ?</span>
+            <span data-acc-icon="" style="flex-shrink:0;width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:#0097B2;transition:transform .35s cubic-bezier(.16,1,.3,1);font-size:24px;font-weight:300;line-height:1;">+</span>
+          </div>
+          <div data-acc-panel="" style="max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1);">
+            <div style="padding:0 28px 26px 72px;font-size:14px;color:#5B6B70;line-height:1.7;">Oui. La bonne offre dépend de votre situation, pas de la taille de votre structure : indépendants, TPE, PME et institutions font partie de nos accompagnements.</div>
+          </div>
+        </div>
+        <div data-acc="" data-open="0" style="background:#fff;border:1px solid #E8F0F1;border-radius:18px;box-shadow:0 6px 22px rgba(4,92,111,.06);overflow:hidden;transition:border-color .3s,box-shadow .3s;">
+          <div data-acc-head="" style="display:flex;align-items:center;gap:20px;padding:24px 28px;cursor:pointer;">
+            <span style="font-size:13px;font-weight:700;color:#0097B2;letter-spacing:.04em;flex-shrink:0;width:24px;">04</span>
+            <span style="flex:1;font-weight:600;font-size:16px;color:#0B2027;">Intervenez-vous partout en Martinique ?</span>
+            <span data-acc-icon="" style="flex-shrink:0;width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:#0097B2;transition:transform .35s cubic-bezier(.16,1,.3,1);font-size:24px;font-weight:300;line-height:1;">+</span>
+          </div>
+          <div data-acc-panel="" style="max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1);">
+            <div style="padding:0 28px 26px 72px;font-size:14px;color:#5B6B70;line-height:1.7;">Oui, sur toute la Martinique, en présentiel comme à distance. Le bureau est à Fort-de-France, à BeBooster (immeuble Equinoxe).</div>
+          </div>
+        </div>
+        <div data-acc="" data-open="0" style="background:#fff;border:1px solid #E8F0F1;border-radius:18px;box-shadow:0 6px 22px rgba(4,92,111,.06);overflow:hidden;transition:border-color .3s,box-shadow .3s;">
+          <div data-acc-head="" style="display:flex;align-items:center;gap:20px;padding:24px 28px;cursor:pointer;">
+            <span style="font-size:13px;font-weight:700;color:#0097B2;letter-spacing:.04em;flex-shrink:0;width:24px;">05</span>
+            <span style="flex:1;font-weight:600;font-size:16px;color:#0B2027;">Comment est fixé le prix d'une mission ?</span>
+            <span data-acc-icon="" style="flex-shrink:0;width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:#0097B2;transition:transform .35s cubic-bezier(.16,1,.3,1);font-size:24px;font-weight:300;line-height:1;">+</span>
+          </div>
+          <div data-acc-panel="" style="max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1);">
+            <div style="padding:0 28px 26px 72px;font-size:14px;color:#5B6B70;line-height:1.7;">Après le premier échange et un diagnostic rapide. Vous recevez un devis clair sous 24 h, avec le périmètre et les résultats visés — le prix est visible avant de décider.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" style="position:relative;overflow:hidden;background:linear-gradient(150deg,#032027 0%,#043845 48%,#045C6F 100%);">
+    <div style="position:relative;overflow:hidden;">
+      <img src="assets/atelier_11.jpg" data-parallax="0.05" alt="" style="position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;opacity:.16;will-change:transform;">
+      <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 1.1px,transparent 1.1px);background-size:34px 34px;"></div>
+      <div style="position:absolute;top:-120px;right:-90px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,178,.5),transparent 70%);filter:blur(80px);"></div>
+      <div style="position:absolute;bottom:-140px;left:-70px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.16),transparent 70%);filter:blur(90px);"></div>
+      <div style="max-width:1260px;margin:0 auto;padding:96px 60px;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;color:#fff;">
+        <div data-reveal="">
+          <div style="display:inline-flex;align-items:center;gap:12px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#FFCE08;margin-bottom:24px;"><span style="width:28px;height:1.5px;background:linear-gradient(90deg,transparent,#FFCE08);"></span>Sans engagement</div>
+          <h2 style="font-size:40px;font-weight:600;line-height:1.14;letter-spacing:-.02em;margin:0 0 16px;">Parlons de votre situation</h2>
+          <p style="font-size:15px;color:#CDE7EC;line-height:1.7;margin:0 0 38px;max-width:420px;">15 minutes suffisent pour identifier l'offre qui correspond à votre besoin — sans engagement.</p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="tel:+33695958680" style="color:#fff;display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 20px;" style-hover="background:rgba(255,255,255,.1);">
+              <span style="width:44px;height:44px;border-radius:12px;background:rgba(255,206,8,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCE08" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <span><span style="display:block;font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.04em;">Téléphone</span><span style="font-weight:600;">+33 6 95 95 86 80</span></span>
+            </a>
+            <a href="https://wa.me/33695958680" style="color:#fff;display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 20px;" style-hover="background:rgba(255,255,255,.1);">
+              <span style="width:44px;height:44px;border-radius:12px;background:rgba(255,206,8,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCE08" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
+              <span><span style="display:block;font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.04em;">WhatsApp</span><span style="font-weight:600;">Réponse sous 24 h</span></span>
+            </a>
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0k7AiHzHdrwTq9RbgKjm8bokxFIgCJ1VabxS8OdNyvXT5qtiux8Wi9zUUXe-Z-0orSB7pwO6hm" style="color:#fff;display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 20px;" style-hover="background:rgba(255,255,255,.1);">
+              <span style="width:44px;height:44px;border-radius:12px;background:rgba(255,206,8,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCE08" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span>
+              <span><span style="display:block;font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.04em;">Agenda</span><span style="font-weight:600;">Planifier un appel de 15 min</span></span>
+            </a>
+          </div>
+        </div>
+        <div data-reveal="" style="position:relative;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(20px);border-radius:22px;padding:38px;color:#fff;box-shadow:0 30px 70px rgba(3,32,39,.45);">
+          <div style="position:absolute;top:-50px;right:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,8,.18),transparent 70%);filter:blur(20px);pointer-events:none;"></div>
+          <div style="position:relative;font-weight:600;font-size:18px;margin-bottom:6px;">Demander un devis</div>
+          <div style="position:relative;font-size:12.5px;color:rgba(255,255,255,.65);margin-bottom:22px;">On vous répond sous 24 h, avec un premier avis honnête.</div>
+          <div style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+            <input data-validate="text" placeholder="Nom" style="background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 16px;font-family:'Poppins',sans-serif;font-size:13px;outline:none;" style-focus="border-color:#FFCE08;">
+            <input data-validate="email" type="email" placeholder="E-mail *" style="background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 16px;font-family:'Poppins',sans-serif;font-size:13px;outline:none;" style-focus="border-color:#FFCE08;">
+          </div>
+          <select style="position:relative;width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 16px;font-family:'Poppins',sans-serif;font-size:13px;color:rgba(255,255,255,.7);margin-bottom:12px;outline:none;" style-focus="border-color:#FFCE08;">
+            <option style="color:#0B2027;">Quelle offre vous intéresse ?</option><option style="color:#0B2027;">Chef de Projet — PMO</option><option style="color:#0B2027;">Direction Commerciale externalisée</option><option style="color:#0B2027;">Transformation — 90 jours</option><option style="color:#0B2027;">Je ne sais pas encore</option>
+          </select>
+          <textarea placeholder="Décrivez votre situation en quelques lignes" rows="3" style="position:relative;width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 16px;font-family:'Poppins',sans-serif;font-size:13px;resize:vertical;margin-bottom:16px;outline:none;" style-focus="border-color:#FFCE08;"></textarea>
+          <button id="quote-btn" style="position:relative;overflow:hidden;width:100%;background:linear-gradient(135deg,#FFDD66 0%,#FFCE08 60%,#F2C200 100%);color:#0B2027;font-weight:600;font-size:14px;padding:15px 0;border:none;cursor:pointer;font-family:'Poppins',sans-serif;border-radius:50px;box-shadow:0 12px 28px rgba(255,206,8,.32);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s cubic-bezier(.16,1,.3,1),filter .35s;" style-after="content:'';position:absolute;top:0;left:0;width:30%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);animation:shine 4.5s ease-in-out infinite;" style-hover="transform:translateY(-2px);box-shadow:0 18px 40px rgba(255,206,8,.5);filter:brightness(1.05);">Envoyer ma demande<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="margin-left:9px;vertical-align:-2px;"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"></path></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background:#fff;">
+    <div style="max-width:1260px;margin:0 auto;padding:56px 60px 0;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><img src="assets/logo.webp" style="width:38px;height:38px;border-radius:50%;" alt=""><span style="font-weight:600;font-size:13px;letter-spacing:.05em;">SOLUTIONS ENTREPRISES 972</span></div>
+        <div style="font-size:12.5px;color:#5B6B70;line-height:1.9;">12 rue des Arts et Métiers · Immeuble Equinoxe, BeBooster<br>97200 Fort-de-France, Martinique</div>
+      </div>
+      <div><div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:14px;">Offres</div><div style="font-size:13px;color:#5B6B70;line-height:2.2;">Chef de Projet — PMO<br>Direction Commerciale<br>Transformation 90 jours</div></div>
+      <div><div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:14px;">Contact</div><div style="font-size:13px;color:#5B6B70;line-height:2.2;">+33 6 95 95 86 80<br>contact@solutionsentreprises972.com<br>@solutions_entreprises972</div></div>
+    </div>
+    <div style="max-width:1260px;margin:32px auto 0;border-top:1px solid #EFF3F4;padding:20px 60px;font-size:11.5px;color:#94A6AB;text-align:center;">Solutions Entreprises 972 — Cabinet de conseil labellisé, Martinique · © 2026</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;animations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Comportement&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const anim = this.props.animations !== false && !reduced;
+    const prog = document.getElementById('progress');
+
+    this.onScroll = () => {
+      const nav = document.getElementById('nav');
+      if (nav) {
+        const solid = window.scrollY > 660;
+        if (solid) {
+          nav.style.background = 'rgba(255,255,255,.82)';
+          nav.style.backdropFilter = 'blur(18px)';
+          nav.style.borderColor = 'rgba(11,32,39,.06)';
+          nav.style.boxShadow = '0 10px 36px rgba(11,32,39,.14)';
+          document.getElementById('nav-brand').style.color = '#0B2027';
+          document.getElementById('nav-links').style.color = '#41545A';
+        } else {
+          nav.style.background = 'transparent';
+          nav.style.backdropFilter = 'none';
+          nav.style.borderColor = 'rgba(255,255,255,.28)';
+          nav.style.boxShadow = 'none';
+          document.getElementById('nav-brand').style.color = '#fff';
+          document.getElementById('nav-links').style.color = 'rgba(255,255,255,.82)';
+        }
+      }
+      if (prog) {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      }
+      if (anim) {
+        document.querySelectorAll('[data-parallax]').forEach(el => {
+          const speed = parseFloat(el.getAttribute('data-parallax')) || 0;
+          const p = el.parentElement.getBoundingClientRect();
+          const off = (p.top + p.height / 2) - (window.innerHeight / 2);
+          el.style.transform = 'translateY(' + (off * speed).toFixed(1) + 'px)';
+        });
+      }
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+
+    if (anim) {
+      const staggers = document.querySelectorAll('[data-stagger]');
+      staggers.forEach(c => { [...c.children].forEach(ch => { ch.style.opacity = '0'; ch.style.transition = 'opacity .6s ease, transform .55s cubic-bezier(.16,1,.3,1), box-shadow .55s cubic-bezier(.16,1,.3,1), border-color .55s ease, background-color .45s ease'; }); });
+      const els = document.querySelectorAll('[data-reveal]');
+      els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(32px)'; el.style.transition = 'opacity .7s ease, transform .7s cubic-bezier(.16,1,.3,1)'; });
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)';
+          if (e.target.hasAttribute('data-stagger')) {
+            [...e.target.children].forEach((ch, i) => setTimeout(() => { ch.style.opacity = '1'; }, i * 110));
+          }
+          e.target.querySelectorAll('[data-count]').forEach(s => this.runCounter(s));
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.12 });
+      els.forEach(el => io.observe(el));
+      staggers.forEach(c => { if (!c.hasAttribute('data-reveal')) io.observe(c); });
+      this._io = io;
+    } else {
+      document.querySelectorAll('[data-count]').forEach(s => this.runCounter(s));
+    }
+
+    const h1 = document.getElementById('hero-title');
+    if (h1 && anim) {
+      const words = h1.textContent.trim().split(/\s+/);
+      h1.innerHTML = words.map(w => '<span style="display:inline-block;opacity:0;transform:translateY(20px);transition:opacity .55s ease, transform .55s cubic-bezier(.16,1,.3,1);">' + w + '</span>').join(' ');
+      [...h1.children].forEach((s, i) => setTimeout(() => { s.style.opacity = '1'; s.style.transform = 'translateY(0)'; }, 150 + i * 48));
+    }
+
+    if (anim) {
+      document.querySelectorAll('[data-tilt]').forEach(el => {
+        const base = el.getAttribute('data-tilt-base') || '';
+        el.addEventListener('mousemove', ev => {
+          const r = el.getBoundingClientRect();
+          const px = (ev.clientX - r.left) / r.width - 0.5;
+          const py = (ev.clientY - r.top) / r.height - 0.5;
+          el.style.transform = base + ' perspective(900px) rotateY(' + (px * 5).toFixed(2) + 'deg) rotateX(' + (-py * 5).toFixed(2) + 'deg)';
+        });
+        el.addEventListener('mouseleave', () => { el.style.transform = base; });
+      });
+    }
+
+    const track = document.getElementById('logos-track');
+    if (track) {
+      const wrap = track.parentElement;
+      wrap.addEventListener('mouseenter', () => { track.style.animationPlayState = 'paused'; });
+      wrap.addEventListener('mouseleave', () => { track.style.animationPlayState = 'running'; });
+      track.querySelectorAll('img').forEach(img => {
+        img.style.filter = 'grayscale(100%)'; img.style.opacity = '.55'; img.style.transition = 'filter .3s, opacity .3s';
+        img.addEventListener('mouseenter', () => { img.style.filter = 'none'; img.style.opacity = '1'; });
+        img.addEventListener('mouseleave', () => { img.style.filter = 'grayscale(100%)'; img.style.opacity = '.55'; });
+      });
+    }
+
+    document.querySelectorAll('[data-acc]').forEach(item => {
+      const head = item.querySelector('[data-acc-head]');
+      const panel = item.querySelector('[data-acc-panel]');
+      const icon = item.querySelector('[data-acc-icon]');
+      head.addEventListener('click', () => {
+        const open = item.getAttribute('data-open') === '1';
+        if (open) {
+          panel.style.maxHeight = '0'; item.setAttribute('data-open', '0');
+          icon.style.transform = 'rotate(0deg)'; item.style.borderColor = '#E8F0F1';
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + 'px'; item.setAttribute('data-open', '1');
+          icon.style.transform = 'rotate(135deg)'; item.style.borderColor = '#BFE0E6';
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-validate]').forEach(input => {
+      const w = document.createElement('div'); w.style.position = 'relative';
+      input.parentNode.insertBefore(w, input); w.appendChild(input);
+      input.style.width = '100%'; input.style.boxSizing = 'border-box';
+      const chk = document.createElement('span');
+      chk.textContent = '✓';
+      chk.style.cssText = 'position:absolute;right:14px;top:50%;transform:translateY(-50%) scale(0);color:#4ADE80;font-weight:700;font-size:14px;transition:transform .25s cubic-bezier(.16,1,.3,1);pointer-events:none;';
+      w.appendChild(chk);
+      input.addEventListener('input', () => {
+        const type = input.getAttribute('data-validate');
+        const ok = type === 'email' ? /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(input.value) : input.value.trim().length > 1;
+        input.style.borderColor = ok ? 'rgba(74,222,128,.7)' : 'rgba(255,255,255,.16)';
+        chk.style.transform = 'translateY(-50%) scale(' + (ok ? 1 : 0) + ')';
+      });
+    });
+
+    const car = document.querySelector('[data-carousel]');
+    if (car) {
+      const track = car.querySelector('[data-carousel-track]');
+      const slides = [...track.children];
+      const dots = [...document.querySelectorAll('[data-carousel-dot]')];
+      const prev = document.querySelector('[data-carousel-prev]');
+      const next = document.querySelector('[data-carousel-next]');
+      let idx = 0, timer = null;
+      const render = () => {
+        track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+        dots.forEach((d, k) => { d.style.background = k === idx ? '#FFCE08' : 'rgba(255,255,255,.3)'; d.style.width = k === idx ? '26px' : '8px'; });
+      };
+      const go = n => { idx = (n + slides.length) % slides.length; render(); };
+      const start = () => { if (anim) { stop(); timer = setInterval(() => go(idx + 1), 6000); } };
+      const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+      if (prev) prev.addEventListener('click', () => { go(idx - 1); start(); });
+      if (next) next.addEventListener('click', () => { go(idx + 1); start(); });
+      dots.forEach((d, k) => d.addEventListener('click', () => { go(k); start(); }));
+      car.addEventListener('mouseenter', stop);
+      car.addEventListener('mouseleave', start);
+      render(); start();
+      this._carStop = stop;
+    }
+
+    const btn = document.getElementById('quote-btn');
+    if (btn) {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        if (btn._busy) return; btn._busy = true;
+        const orig = btn.textContent;
+        btn.textContent = 'Envoi…'; btn.style.filter = 'brightness(.95)';
+        setTimeout(() => {
+          btn.textContent = 'Envoyé ✓'; btn.style.background = 'linear-gradient(135deg,#4ADE80,#22B45E)'; btn.style.color = '#04361C';
+          setTimeout(() => {
+            btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; btn.style.filter = ''; btn._busy = false;
+          }, 2200);
+        }, 900);
+      });
+    }
+  }
+  runCounter(span) {
+    if (span._done) return; span._done = true;
+    const target = parseInt(span.getAttribute('data-count'), 10);
+    const pre = span.getAttribute('data-prefix') || '', suf = span.getAttribute('data-suffix') || '';
+    const t0 = performance.now(), dur = 1400;
+    const tick = t => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      span.textContent = pre + Math.round(target * e) + suf;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); if (this._carStop) this._carStop(); window.removeEventListener('scroll', this.onScroll); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
