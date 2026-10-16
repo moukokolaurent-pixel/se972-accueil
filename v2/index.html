@@ -188,7 +188,7 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
   [data-who] > div:first-child{border-right:0 !important;}
   [data-who] button{padding:18px 22px 18px 19px !important;}
   [data-who-panel]{padding:24px 22px 30px !important;gap:26px !important;}
-  [data-who] button + [data-who-panel]{background:rgba(255,255,255,.06);border-left:3px solid #FFCE08;border-bottom:1px solid rgba(255,255,255,.1);padding:6px 22px 30px 19px !important;}
+  [data-who] button + [data-who-panel]{background:rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.1);padding:6px 22px 30px 22px !important;}
   [data-who] button:has(+ [data-who-panel]){border-bottom-color:transparent !important;}
   [data-dc-tpl="173"]{font-size:21px !important;}
   [data-dc-tpl="169"]{text-wrap:balance;}
@@ -250,7 +250,7 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
   #nav.open{background:rgba(255,255,255,.97) !important;border-color:rgba(11,32,39,.08) !important;box-shadow:0 10px 36px rgba(11,32,39,.14) !important;}
   #nav.open #nav-links{display:flex !important;position:absolute;left:0;right:0;top:calc(100% + 8px);min-width:260px;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:8px;background:#fff;border:1px solid rgba(11,32,39,.08);border-radius:22px;box-shadow:0 18px 40px rgba(11,32,39,.16);color:#0B2027 !important;font-size:16px !important;white-space:normal;}
   #nav.open #nav-links > a{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 16px !important;border-radius:14px;border-bottom:0 !important;color:#0B2027 !important;}
-  #nav.open #nav-links > a[aria-current="page"]{background:#F4FAFB;box-shadow:inset 3px 0 0 #FFCE08;}
+  #nav.open #nav-links > a[aria-current="page"]{color:#0097B2 !important;font-weight:600;}
   #nav.open #nav-links > [data-nav-wa]{margin-top:6px;border-top:1px solid #E4EEF0;border-radius:0 0 14px 14px;font-weight:600;color:#0B7A3E !important;}
   /* Bouton WhatsApp flottant : masqué sur le Hero, sur le Contact et quand un CTA pleine largeur passe dessous */
   #wa-fab{display:flex;align-items:center;justify-content:center;position:fixed;z-index:90;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff !important;box-shadow:0 10px 26px rgba(11,32,39,.28);opacity:0;visibility:hidden;transform:translateY(14px) scale(.9);transition:opacity .3s,transform .4s cubic-bezier(.22,1,.36,1),visibility 0s linear .4s;}
@@ -263,6 +263,36 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
 }
 @media (max-width:640px){#nav > a:first-child{padding:5px;margin:-5px;}}
 @media (max-width:359px){#nav{gap:8px !important;}#nav > a:last-child{padding:0 12px !important;}}
+/* Retours client (mobile) : bouton contact en icône, menu épuré sans bande latérale, offres en défilement latéral, « Pour qui » replié */
+[data-nav-ico],[data-cells-dots]{display:none;}
+@media (max-width:900px){
+  #nav.open #nav-links{padding:6px 0 !important;border:0 !important;border-radius:22px !important;box-shadow:0 18px 44px rgba(11,32,39,.18) !important;}
+  #nav.open #nav-links > a{min-height:54px;padding:0 22px !important;border-radius:0 !important;font-size:16.5px;font-weight:500;}
+  #nav.open #nav-links > a + a{border-top:1px solid #EEF3F4 !important;}
+  #nav.open #nav-links > [data-nav-wa]{margin-top:0;border-radius:0 !important;font-weight:500;color:#0B2027 !important;}
+}
+@media (max-width:640px){
+  #nav{gap:8px !important;}
+  #nav > a:last-child{width:44px;height:44px;min-height:44px;padding:0 !important;gap:0 !important;border-radius:50% !important;justify-content:center;}
+  [data-nav-ico]{display:block;}
+  [data-nav-txt]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+  [data-cells]{display:flex !important;gap:12px !important;margin:0 -22px !important;padding:4px 22px 6px !important;overflow-x:auto !important;overflow-y:hidden !important;scroll-snap-type:x mandatory;scroll-padding-inline:22px;overscroll-behavior-x:contain;scrollbar-width:none;background:transparent !important;border:0 !important;border-radius:0 !important;}
+  [data-cells]::-webkit-scrollbar{display:none;}
+  [data-cells] > a{flex:0 0 84%;min-width:0;box-sizing:border-box;scroll-snap-align:start;overflow:hidden;border-radius:18px;border:1px solid #DCEAED;}
+  [data-cells] > a:first-child{border-color:transparent;}
+  [data-cells] > a:last-child{flex:0 0 66%;flex-direction:column !important;justify-content:flex-end !important;align-items:flex-start !important;gap:14px !important;min-height:0 !important;padding:26px 22px 24px !important;}
+  [data-cells] > a:last-child > span:first-child{position:static !important;width:auto !important;height:auto !important;overflow:visible !important;clip-path:none !important;white-space:normal !important;font-size:18px !important;}
+  [data-cells] > a:last-child > span:last-child{flex:0 0 auto !important;justify-content:flex-start !important;font-size:14.5px !important;}
+  [data-cells-dots]{display:flex;justify-content:center;gap:6px;margin-top:18px;}
+  [data-cells-dots] > span{width:6px;height:6px;border-radius:3px;background:#C9D8DC;transition:width .35s cubic-bezier(.22,1,.36,1),background .35s;}
+  [data-cells-dots] > span.on{width:18px;background:#0097B2;}
+  [data-who] button{border-left:0 !important;padding:18px 22px !important;grid-template-columns:30px minmax(0,1fr) 28px !important;}
+  [data-who] button::after{content:'+';align-self:center;width:28px;height:28px;box-sizing:border-box;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:18px;font-weight:300;line-height:1;color:#FFCE08;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+  [data-who] button[data-open]::after{transform:rotate(45deg);}
+  [data-who][data-closed] [data-who-panel]{display:none !important;}
+  [data-who][data-closed] button{background:transparent !important;}
+  [data-who] button > span:last-child > span:first-child{color:#fff !important;}
+}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
 </style>
 <script type="importmap">
@@ -279,7 +309,7 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
       <a data-nav-wa="" href="https://wa.me/33695958680" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>Écrire sur WhatsApp</a>
     </div>
     <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg class="i-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="i-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
-    <a data-dc-tpl="16" href="contact.html" class="scp0 scp1" style="position: relative; overflow: hidden; flex-shrink: 0; white-space: nowrap; background: linear-gradient(135deg, rgb(255, 221, 102), rgb(255, 206, 8) 60%, rgb(242, 194, 0)); color: rgb(11, 32, 39); font-weight: 600; padding: 12px 24px; font-size: 13px; border-radius: 50px; box-shadow: rgba(255, 206, 8, 0.28) 0px 8px 20px; transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s; display: inline-flex; align-items: center; gap: 8px;">Discutons de votre projet</a>
+    <a data-dc-tpl="16" href="contact.html" class="scp0 scp1" style="position: relative; overflow: hidden; flex-shrink: 0; white-space: nowrap; background: linear-gradient(135deg, rgb(255, 221, 102), rgb(255, 206, 8) 60%, rgb(242, 194, 0)); color: rgb(11, 32, 39); font-weight: 600; padding: 12px 24px; font-size: 13px; border-radius: 50px; box-shadow: rgba(255, 206, 8, 0.28) 0px 8px 20px; transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s; display: inline-flex; align-items: center; gap: 8px;"><svg data-nav-ico="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"></rect><path d="m3.5 7 7.4 5.3a1.9 1.9 0 0 0 2.2 0L20.5 7"></path></svg><span data-nav-txt="">Discutons de votre projet</span></a>
   </nav>
 
   <header data-dc-tpl="17" data-screen-label="Hero" style="padding: 14px 14px 0px;">
@@ -576,21 +606,25 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
   var narrow = matchMedia('(max-width: 900px)');
   /* Après un remplacement : sur mobile, le bouton touché reste à la même hauteur à l'écran ; le focus revient sur le nouveau bouton */
   function settle(box, sel, i, before) { var nb = box.querySelectorAll(sel)[i]; if (!nb) return; if (narrow.matches) { var d = nb.getBoundingClientRect().top - before; if (Math.abs(d) > 1) window.scrollBy({ top: d, behavior: 'instant' }); } nb.focus({ preventScroll: true }); }
-  var who = document.querySelector('[data-who]'), whoI = 0, m640 = matchMedia('(max-width: 640px)');
-  function syncWho() { who.querySelectorAll('button').forEach(function (x, j) { x.setAttribute('aria-pressed', j === whoI ? 'true' : 'false'); }); }
-  /* Sous 640 px, le panneau s'ouvre juste sous le profil choisi (accordéon) ; au-dessus, il reprend sa place à droite */
-  function placeWho() { var p = who.querySelector('[data-who-panel]'), b = who.querySelectorAll('button')[whoI]; if (!p || !b) return; if (m640.matches) { if (b.nextElementSibling !== p) b.after(p); } else if (p.parentElement !== who) who.appendChild(p); }
+  var m640 = matchMedia('(max-width: 640px)'), who = document.querySelector('[data-who]'), whoI = m640.matches ? -1 : 0;
+  function syncWho() { who.toggleAttribute('data-closed', whoI < 0); who.querySelectorAll('button').forEach(function (x, j) { x.setAttribute('aria-pressed', j === whoI ? 'true' : 'false'); x.toggleAttribute('data-open', j === whoI); }); }
+  /* Sous 640 px, accordéon : tout est replié au départ, le panneau s'ouvre sous le profil choisi et se replie au second toucher ; au-dessus, onglets avec le panneau à droite */
+  function placeWho() { var p = who.querySelector('[data-who-panel]'), b = who.querySelectorAll('button')[whoI]; if (!p) return; if (m640.matches) { if (b && b.nextElementSibling !== p) b.after(p); } else if (p.parentElement !== who) who.appendChild(p); }
   if (who) {
-    placeWho(); syncWho(); m640.addEventListener('change', placeWho);
+    placeWho(); syncWho();
+    m640.addEventListener('change', function () { if (!m640.matches && whoI < 0) { whoI = 0; who.innerHTML = V.who[0]; } placeWho(); syncWho(); });
     who.addEventListener('click', function (e) {
       var b = e.target.closest('button'); if (!b) return; var i = Array.prototype.indexOf.call(who.querySelectorAll('button'), b); if (i < 0) return;
-      var top = b.getBoundingClientRect().top; whoI = i; who.innerHTML = V.who[i]; placeWho(); settle(who, 'button', i, top); syncWho();
+      var top = b.getBoundingClientRect().top;
+      if (m640.matches && i === whoI) { whoI = -1; syncWho(); settle(who, 'button', i, top); return; }
+      whoI = i; who.innerHTML = V.who[i]; placeWho(); settle(who, 'button', i, top); syncWho();
       /* 641-900 px : le panneau reste sous la liste ; on l'amène à l'écran s'il est en dessous */
       if (narrow.matches && !m640.matches) { var p = who.querySelector('[data-who-panel]'); if (p.getBoundingClientRect().top > innerHeight - 160) p.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
     });
   }
-  function acc(sel, variants, start) {
+  function acc(sel, variants, start, init) {
     var first = document.querySelector(sel); if (!first) return; var box = first.parentElement.parentElement, open = start, S = ':scope > div > button';
+    if (init !== undefined && init !== start) box.innerHTML = variants[start + 1];
     function sync() { box.querySelectorAll(S).forEach(function (x, j) { x.setAttribute('aria-expanded', j === open ? 'true' : 'false'); }); }
     sync();
     box.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b || b.parentElement.parentElement !== box) return; var i = Array.prototype.indexOf.call(box.querySelectorAll(S), b); if (i < 0) return; var top = b.getBoundingClientRect().top; open = open === i ? -1 : i; box.innerHTML = variants[open + 1]; settle(box, S, i, top); sync(); });
@@ -618,7 +652,23 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
     if (mroot) new MutationObserver(watch).observe(mroot, { childList: true });
   }
   acc('#cabinet-plus button[type=button]', V.cab, -1);
-  acc('#faq button[type=button]', V.faq, 0);
+  acc('#faq button[type=button]', V.faq, m640.matches ? -1 : 0, 0);
+  /* Offres sous 640 px : défilement latéral avec repères de position */
+  var cells = document.querySelector('[data-cells]');
+  if (cells) {
+    var items = Array.prototype.slice.call(cells.children), dots = document.createElement('div'), cur = -1, rq = 0;
+    dots.setAttribute('data-cells-dots', ''); dots.setAttribute('aria-hidden', 'true');
+    items.forEach(function () { dots.appendChild(document.createElement('span')); });
+    cells.after(dots);
+    var dotUpd = function () {
+      rq = 0; var r0 = cells.getBoundingClientRect().left + parseFloat(getComputedStyle(cells).paddingLeft || 0), best = 0, bd = Infinity;
+      if (cells.scrollLeft >= cells.scrollWidth - cells.clientWidth - 2) best = items.length - 1;
+      else items.forEach(function (it, i) { var d = Math.abs(it.getBoundingClientRect().left - r0); if (d < bd) { bd = d; best = i; } });
+      if (best !== cur) { cur = best; Array.prototype.forEach.call(dots.children, function (d, i) { d.classList.toggle('on', i === cur); }); }
+    };
+    cells.addEventListener('scroll', function () { if (!rq) rq = requestAnimationFrame(dotUpd); }, { passive: true });
+    dotUpd();
+  }
   if (window.SE972) window.SE972.init({ animations: true, navAt: 520 });
 })();
 </script>
