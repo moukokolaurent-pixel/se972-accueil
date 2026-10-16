@@ -14,13 +14,14 @@ window.SE972 = (function () {
       nav.classList.toggle('solid', s);
       nav.style.background = s ? 'rgba(255,255,255,.86)' : 'transparent';
       nav.style.backdropFilter = s ? 'blur(18px)' : 'none';
+      nav.style.webkitBackdropFilter = s ? 'blur(18px)' : 'none';
       nav.style.borderColor = s ? 'rgba(11,32,39,.06)' : 'rgba(255,255,255,.28)';
       nav.style.boxShadow = s ? '0 10px 36px rgba(11,32,39,.14)' : 'none';
       if (brand) brand.style.color = s ? '#0B2027' : '#fff';
       if (links) links.style.color = s ? '#41545A' : 'rgba(255,255,255,.82)';
     }
     // Parallaxe : la valeur de scroll est lissée (lerp) pour que les images glissent sans à-coups
-    const px = anim ? [...document.querySelectorAll('[data-parallax]')] : [];
+    const px = anim && matchMedia('(min-width: 901px)').matches ? [...document.querySelectorAll('[data-parallax]')] : [];
     px.forEach(el => { el.style.willChange = 'transform'; el.style.transition = 'none'; });
     let target = scrollY, current = scrollY, raf = null;
     function frame() {
