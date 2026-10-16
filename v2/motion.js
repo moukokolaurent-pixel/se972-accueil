@@ -11,6 +11,7 @@ window.SE972 = (function () {
     function navUpdate(y) {
       if (!nav) return;
       const s = y > navAt; if (s === navSolid) return; navSolid = s;
+      nav.classList.toggle('solid', s);
       nav.style.background = s ? 'rgba(255,255,255,.86)' : 'transparent';
       nav.style.backdropFilter = s ? 'blur(18px)' : 'none';
       nav.style.borderColor = s ? 'rgba(11,32,39,.06)' : 'rgba(255,255,255,.28)';
