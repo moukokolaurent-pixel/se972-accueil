@@ -100,28 +100,29 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
 #nav > a:first-child{flex-shrink:0;}
 /* Hero mobile : la photo (paysage) passe en bandeau recadré sur Kim, le texte se lit dessous sur fond uni */
 @media (max-width:640px){
-  #nav{left:18px !important;right:18px !important;transform:none !important;max-width:none !important;justify-content:space-between !important;top:18px !important;padding:5px 5px 5px 6px !important;}
+  #nav{left:12px !important;right:12px !important;transform:none !important;max-width:none !important;justify-content:space-between !important;top:12px !important;padding:5px 5px 5px 6px !important;}
   #nav > a:first-child img{width:34px !important;height:34px !important;}
   #nav > a:last-child{padding:10px 16px !important;font-size:12.5px !important;}
-  header[data-screen-label="Hero"]{padding:10px 10px 0 !important;}
-  header[data-screen-label="Hero"] > div{min-height:0 !important;border-radius:22px !important;}
+  header[data-screen-label="Hero"]{padding:0 !important;}
+  header[data-screen-label="Hero"] > div{min-height:0 !important;border-radius:0 !important;}
   [data-hero-photo]{bottom:auto !important;aspect-ratio:9/8;}
   [data-hero-photo] > img{object-position:50% 50% !important;transform:scale(1.6);transform-origin:39% 47%;}
   [data-hero-photo] > div{background:linear-gradient(180deg,rgba(2,22,28,.6) 0%,rgba(2,22,28,0) 26%,rgba(3,32,39,0) 50%,rgba(3,32,39,.85) 80%,#032027 100%) !important;}
-  [data-hero-inner]{margin:0 !important;text-align:left !important;max-width:none !important;padding:calc((100vw - 20px) * 8 / 9 - 58px) 20px 0 !important;}
+  [data-hero-inner]{margin:0 !important;text-align:left !important;max-width:none !important;padding:calc(100vw * 8 / 9 - 58px) 22px 0 !important;}
   [data-eyebrow]{font-size:10.5px !important;letter-spacing:.16em !important;gap:10px !important;margin-bottom:14px !important;}
   [data-eyebrow] > span:first-child{width:18px !important;background:#FFCE08 !important;}
   [data-eyebrow] > span:last-child{display:none !important;}
   [data-eb-mid]{display:none;}
   [data-h1]{font-size:31px !important;line-height:1.13 !important;letter-spacing:-.025em !important;margin:0 0 14px !important;text-wrap:pretty !important;}
-  [data-hero-inner] > p{font-size:15px !important;line-height:1.6 !important;margin:0 0 24px !important;max-width:none !important;text-wrap:balance;}
+  [data-hero-inner] > p{font-size:15px !important;line-height:1.6 !important;margin:0 0 24px !important;max-width:none !important;}
+  [data-m-line]{display:block;}
   [data-hero-ctas]{display:grid !important;grid-template-columns:1fr 1fr;gap:10px !important;}
   [data-hero-ctas] > a:first-child{grid-column:1 / -1;justify-content:center;padding:16px 20px !important;font-size:15px !important;}
   [data-hero-ctas] > a:not(:first-child){align-items:flex-start !important;padding:12px 16px !important;border-radius:16px !important;border-width:1px !important;border-color:rgba(255,255,255,.3) !important;background:rgba(255,255,255,.06);font-size:14.5px !important;font-weight:600 !important;}
   [data-hero-ctas] > a:not(:first-child) > span{display:flex;flex-direction:column;gap:2px;}
   [data-cta-sep]{display:none;}
   [data-cta-sub]{font-size:12px;font-weight:400;color:rgba(255,255,255,.7);}
-  [data-trust]{align-items:flex-start !important;gap:6px !important;margin:26px 20px 0 !important;padding:16px 0 22px !important;border-top:1px solid rgba(255,255,255,.12);font-size:12px !important;}
+  [data-trust]{align-items:flex-start !important;gap:6px !important;margin:26px 22px 0 !important;padding:16px 0 22px !important;border-top:1px solid rgba(255,255,255,.12);font-size:12px !important;}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
 </style>
@@ -150,8 +151,8 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
       <div data-dc-tpl="22" style="position: absolute; bottom: -140px; left: -80px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 206, 8, 0.26), transparent 70%); filter: blur(80px); animation: 88s ease-in-out 0s infinite normal none running haloB;"></div>
       <div data-dc-tpl="23" data-hero-inner="" style="position: relative; margin: auto; text-align: center; padding: 200px 40px 70px; max-width: 900px; color: rgb(255, 255, 255); text-shadow: rgba(2, 20, 26, 0.55) 0px 2px 18px;">
         <div data-dc-tpl="24" data-eyebrow="" style="display: inline-flex; align-items: center; gap: 13px; font-size: 11.5px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: rgb(255, 206, 8); margin-bottom: 30px;"><span data-dc-tpl="25" style="width: 30px; height: 1.5px; background: linear-gradient(90deg, transparent, rgb(255, 206, 8));"></span><span>Kim Gros-Désormeaux<span data-eb-mid=""> · Conseil aux entreprises</span> · Martinique</span><span data-dc-tpl="26" style="width: 30px; height: 1.5px; background: linear-gradient(90deg, rgb(255, 206, 8), transparent);"></span></div>
-        <h1 data-dc-tpl="27" data-h1="" style="font-size: 60px; font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 26px; text-wrap: balance;">Conseil, formation et pilotage de projets <span data-dc-tpl="28" style="color: rgb(127, 216, 232);">pour les entreprises de Martinique.</span></h1>
-        <p data-dc-tpl="29" style="font-size: 17px; line-height: 1.7; color: rgba(255, 255, 255, 0.88); max-width: 520px; margin: 0px auto 42px; font-weight: 300;">Nous prenons une partie du quotidien. Vous gardez les décisions.</p>
+        <h1 data-dc-tpl="27" data-h1="" style="font-size: 60px; font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 26px; text-wrap: balance;">Conseil, formation et pilotage de projets <span data-dc-tpl="28" style="color: rgb(127, 216, 232);">pour les entreprises de&nbsp;Martinique.</span></h1>
+        <p data-dc-tpl="29" style="font-size: 17px; line-height: 1.7; color: rgba(255, 255, 255, 0.88); max-width: 520px; margin: 0px auto 42px; font-weight: 300;">Nous prenons une partie du quotidien. <span data-m-line="">Vous gardez les décisions.</span></p>
         <div data-dc-tpl="30" data-hero-ctas="" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; text-shadow: none;">
           <a data-dc-tpl="31" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0k7AiHzHdrwTq9RbgKjm8bokxFIgCJ1VabxS8OdNyvXT5qtiux8Wi9zUUXe-Z-0orSB7pwO6hm" class="scp0 scp2" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 9px; background: linear-gradient(135deg, rgb(255, 221, 102), rgb(255, 206, 8) 60%, rgb(242, 194, 0)); color: rgb(11, 32, 39); font-weight: 600; padding: 16px 32px; font-size: 14.5px; border-radius: 50px; box-shadow: rgba(255, 206, 8, 0.32) 0px 14px 34px; transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s;">Planifier un appel de 15 min</a>
           <a data-dc-tpl="32" href="consulting.html" class="scp3" style="display: inline-flex; align-items: center; gap: 9px; padding: 15px 30px; border: 1.5px solid rgba(255, 255, 255, 0.5); border-radius: 50px; color: rgb(255, 255, 255); font-weight: 500; font-size: 14.5px; backdrop-filter: blur(6px); transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s;"><span>Conseil<span data-cta-sep=""> · </span><span data-cta-sub="">5 prestations</span></span></a>
