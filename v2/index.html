@@ -1,5 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Accueil SE972 méthode</title>
+<!doctype html><html lang="fr"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <style>
     .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
       border:1px solid color-mix(in srgb,currentColor 50%,transparent);
@@ -45,7 +44,7 @@
         animation-play-state: running !important; transition-duration: 0s !important;
       }
     }
-  </style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><style>x-dc{display:none!important}</style><style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title data-dc-tpl="1">Solutions Entreprises 972 — Conseil aux entreprises en Martinique</title><link rel="icon" href="assets/logo.webp" data-dc-tpl="2"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet" data-dc-tpl="3"><style data-dc-tpl="5">
+  </style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><style>x-dc{display:none!important}</style><style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title data-dc-tpl="1">Solutions Entreprises 972 — Conseil aux entreprises en Martinique</title><link rel="icon" href="assets/logo.webp" data-dc-tpl="2"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet" data-dc-tpl="3"><style data-dc-tpl="5">
 html{scroll-behavior:smooth;}
 body{margin:0;background:#fff;font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased;color:#0B2027;}
 a{color:#045C6F;text-decoration:none;}a:hover{color:#0097B2;}
@@ -55,7 +54,7 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
 @keyframes haloA{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,30px)}}
 @keyframes haloB{0%,100%{transform:translate(0,0)}50%{transform:translate(-32px,-22px)}}
 @keyframes gradShift{0%{background-position:0% 50%}100%{background-position:200% 50%}}
-}
+[data-cells] > a:first-child{z-index:1;}
 [data-cells] > a{position:relative;transition:opacity 1s cubic-bezier(.22,1,.36,1),filter 1s cubic-bezier(.22,1,.36,1),background .8s ease;}
 [data-cells]:hover > a{opacity:.42;filter:saturate(.45);}
 [data-cells] > a:hover{opacity:1;filter:none;}
@@ -84,7 +83,7 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
   [data-split]{grid-template-columns:1fr !important;gap:28px !important;}
   [data-big]{font-size:32px !important;}
   [data-h2]{font-size:34px !important;}
-  [data-cells]{grid-template-columns:1fr !important;}
+  [data-cells]{grid-template-columns:minmax(0,1fr) !important;}
   [data-who]{grid-template-columns:1fr !important;}
   [data-who-panel]{grid-template-columns:1fr !important;gap:28px !important;padding:30px 24px !important;}
   [data-quotes]{grid-template-columns:1fr !important;}
@@ -96,7 +95,7 @@ input,textarea,select,button{font-family:'Poppins',sans-serif;}
   [data-contact]{grid-template-columns:1fr !important;gap:40px !important;}
   [data-foot]{grid-template-columns:1fr !important;gap:28px !important;}
 }
-@media (max-width:1100px){[data-cells]{grid-template-columns:1fr 1fr !important;}}
+@media (min-width:641px) and (max-width:1100px){[data-cells]{grid-template-columns:1fr 1fr !important;}}
 #nav > a:first-child{flex-shrink:0;}
 /* Hero mobile : la photo (paysage) passe en bandeau recadré sur Kim, le texte se lit dessous sur fond uni */
 @media (max-width:640px){
@@ -1182,8 +1181,6 @@ const CSS = `
 .m-again:hover{color:var(--m-ink)}
 .m-rv{opacity:0;transform:translateY(26px);transition:opacity 1.2s ease,transform 1.5s cubic-bezier(.22,1,.36,1)}
 .m-rv.in{opacity:1;transform:none}
-.m-badge.off{opacity:0;pointer-events:none}
-.m-badge{transition:opacity .3s;position:fixed;left:16px;bottom:16px;z-index:120;font:500 12.5px/1.3 'Poppins',sans-serif;color:#0B2027 !important;background:#FFF6CC;border:1.5px dashed #E0B400;border-radius:999px;padding:8px 14px;box-shadow:0 8px 24px rgba(11,32,39,.12)}
 @media (max-width:900px){
   .m-wrap{padding:84px 20px 84px}
   .m-head{grid-template-columns:1fr;gap:14px;margin-bottom:30px}
@@ -1278,9 +1275,6 @@ document.documentElement.lang = 'fr';
 
 waitForPage().then(root => {
   root.innerHTML = SECTION;
-  const badge = document.createElement('a'); badge.className = 'm-badge'; badge.href = '#methode'; badge.textContent = 'Aperçu · section « La méthode » ↓'; document.body.appendChild(badge);
-  /* Le bandeau d'aperçu s'efface quand la section est à l'écran, pour ne rien masquer */
-  new IntersectionObserver(es => badge.classList.toggle('off', es[0].isIntersecting)).observe(root);
   if (!REDUCE) { const rio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rio.unobserve(e.target); } }), { threshold: .12 }); root.querySelectorAll('.m-head,.m-film').forEach(el => { el.classList.add('m-rv'); rio.observe(el); }); }
   const $ = s => root.querySelector(s);
   const frameEl = $('.m-frame'), stage = $('.m-stage'), pin = $('.m-pin'), pinN = pin.querySelector('b'), lead = $('.m-lead'), leadP = lead.firstElementChild;
